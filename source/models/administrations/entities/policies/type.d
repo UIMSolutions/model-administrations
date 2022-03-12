@@ -5,32 +5,25 @@ import models.administrations;
 
 // 
 class DADMPolicyType : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "policyName": OOPAttributeString.descriptions(["en":""]),
-      "purpose": OOPAttributeString.descriptions(["en":""]),
-      "dropDialog": OOPAttributeString.descriptions(["en":""]),
-      "isPolicyReadOnly": OOPAttributeString.descriptions(["en":""]),
-      "isReassignOrganizationSupported": OOPAttributeString.descriptions(["en":""]),
-      "policyType": OOPAttributeString.descriptions(["en":""]),
-      "backingTable_SysPolicyTypeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMPolicyType"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "policyName": OOPAttributeString.descriptions(["en":""]),
+        "purpose": OOPAttributeString.descriptions(["en":""]),
+        "dropDialog": OOPAttributeString.descriptions(["en":""]),
+        "isPolicyReadOnly": OOPAttributeString.descriptions(["en":""]),
+        "isReassignOrganizationSupported": OOPAttributeString.descriptions(["en":""]),
+        "policyType": OOPAttributeString.descriptions(["en":""]),
+        "backingTable_SysPolicyTypeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_policytypes");
   }
-
-  override string entityClass() { return "aDMPolicyType"; }
-  override string entityClasses() { return "aDMPolicyTypes"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMPolicyType() { return new DADMPolicyType; } 
-auto ADMPolicyType(Json json) { return new DADMPolicyType(json); } 
+mixin(OOPEntityCalls!("ADMPolicyType"));
 
 unittest {
   version(uim_entities) {

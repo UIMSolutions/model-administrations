@@ -5,29 +5,22 @@ import models.administrations;
 
 // 
 class DADMSecurityRoleDuty : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "securityRoleId": OOPAttributeString.descriptions(["en":""]),
-      "securityRoleName": OOPAttributeString.descriptions(["en":""]),
-      "securityDutyId": OOPAttributeString.descriptions(["en":""]),
-      "securityDutyName": OOPAttributeString.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMSecurityRoleDuty"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "securityRoleId": OOPAttributeString.descriptions(["en":""]),
+        "securityRoleName": OOPAttributeString.descriptions(["en":""]),
+        "securityDutyId": OOPAttributeString.descriptions(["en":""]),
+        "securityDutyName": OOPAttributeString.descriptions(["en":""]),
+      ])
+      .registerPath("admin_securityroleduties");
   }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  override string entityClass() { return "aDMSecurityRoleDuty"; }
-  override string entityClasses() { return "aDMSecurityRoleDuties"; }
 }
-auto ADMSecurityRoleDuty() { return new DADMSecurityRoleDuty; } 
-auto ADMSecurityRoleDuty(Json json) { return new DADMSecurityRoleDuty(json); } 
+mixin(OOPEntityCalls!("ADMSecurityRoleDuty"));
 
 unittest {
   version(uim_entities) {

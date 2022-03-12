@@ -5,28 +5,21 @@ import models.administrations;
 
 // 
 class DADMSecurityRoleCustomization : DOOPEntity {
-  this() { super();
-    this.attributes([
+  mixin(OOPEntityThis!("ADMSecurityRoleCustomization"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
       "identifier": OOPAttributeString.descriptions(["en":""]),
       "xmlObject": OOPAttributeString.descriptions(["en":""]),
       "isDisabled": OOPAttributeBoolean.descriptions(["en":""]),
-    ]);
+      ])
+      .registerPath("admin_securityrolecustomizations");
   }
-
-  override string entityClass() { return "aDMSecurityRoleCustomization"; }
-  override string entityClasses() { return "aDMSecurityRoleCustomizations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMSecurityRoleCustomization() { return new DADMSecurityRoleCustomization; } 
-auto ADMSecurityRoleCustomization(Json json) { return new DADMSecurityRoleCustomization(json); } 
+mixin(OOPEntityCalls!("ADMSecurityRoleCustomization"));
 
 unittest {
   version(uim_entities) {

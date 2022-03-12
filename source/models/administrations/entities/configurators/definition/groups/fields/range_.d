@@ -4,32 +4,25 @@ module models.administrations.entities.configurators.definition.groups.fields.ra
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroupFieldRange : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-      "fieldName": OOPAttributeString.descriptions(["en":""]),
-      "range": OOPAttributeString.descriptions(["en":""]),
-      "tableName": OOPAttributeString.descriptions(["en":""]),
-      "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "backingTable_ConfRange_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupFieldRange"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
+        "fieldName": OOPAttributeString.descriptions(["en":""]),
+        "range": OOPAttributeString.descriptions(["en":""]),
+        "tableName": OOPAttributeString.descriptions(["en":""]),
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "backingTable_ConfRange_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_configuratorDefinitiongroupfieldranges");
   }
-
-  override string entityClass() { return "admConfiguratorDefinitionGroupFieldRange"; }
-  override string entityClasses() { return "admConfiguratorDefinitionGroupFieldRanges"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMConfiguratorDefinitionGroupFieldRange() { return new DADMConfiguratorDefinitionGroupFieldRange; } 
-auto ADMConfiguratorDefinitionGroupFieldRange(Json json) { return new DADMConfiguratorDefinitionGroupFieldRange(json); } 
+mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupFieldRange"));
 
 unittest {
   version(uim_entities) {

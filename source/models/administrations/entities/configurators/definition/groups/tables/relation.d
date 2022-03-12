@@ -4,35 +4,28 @@ module models.administrations.entities.configurators.definition.groups.tables.re
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroupTableRelation : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "DefinitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-      "FixedValue": OOPAttributeString.descriptions(["en":""]),
-      "RelatedField": OOPAttributeString.descriptions(["en":""]),
-      "RelatedTable": OOPAttributeString.descriptions(["en":""]),
-      "RelationshipType": OOPAttributeString.descriptions(["en":""]),
-      "SourceFieldName": OOPAttributeString.descriptions(["en":""]),
-      "SourceTableName": OOPAttributeString.descriptions(["en":""]),
-      "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "backingTable_ConfRelations_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupTableRelation"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "DefinitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
+        "FixedValue": OOPAttributeString.descriptions(["en":""]),
+        "RelatedField": OOPAttributeString.descriptions(["en":""]),
+        "RelatedTable": OOPAttributeString.descriptions(["en":""]),
+        "RelationshipType": OOPAttributeString.descriptions(["en":""]),
+        "SourceFieldName": OOPAttributeString.descriptions(["en":""]),
+        "SourceTableName": OOPAttributeString.descriptions(["en":""]),
+        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "backingTable_ConfRelations_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_configuratordefinitiongrouptablerelation");
   }
-
-  override string entityClass() { return "admConfiguratorDefinitionGroupTableRelation"; }
-  override string entityClasses() { return "admConfiguratorDefinitionGroupTableRelations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMConfiguratorDefinitionGroupTableRelation() { return new DADMConfiguratorDefinitionGroupTableRelation; } 
-auto ADMConfiguratorDefinitionGroupTableRelation(Json json) { return new DADMConfiguratorDefinitionGroupTableRelation(json); } 
+mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupTableRelation"));
 
 unittest {
   version(uim_entities) {

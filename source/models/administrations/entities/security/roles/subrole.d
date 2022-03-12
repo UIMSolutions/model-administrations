@@ -5,26 +5,19 @@ import models.administrations;
 
 // 
 class DADMUserGroup : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "backingTable_UserGroupInfoRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMUserGroup"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "backingTable_UserGroupInfoRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_usergroups");
   }
-
-  override string entityClass() { return "aDMUserGroup"; }
-  override string entityClasses() { return "aDMUserGroups"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMUserGroup() { return new DADMUserGroup; } 
-auto ADMUserGroup(Json json) { return new DADMUserGroup(json); } 
+mixin(OOPEntityCalls!("ADMUserGroup"));
 
 unittest {
   version(uim_entities) {

@@ -4,37 +4,29 @@ module models.administrations.entities.users.groups.userlist;
 import models.administrations;
 
 // 
-class DADMUserGroupUserListEntity : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "groupId": OOPAttributeString.descriptions(["en":""]),
-      "userId": OOPAttributeString.descriptions(["en":""]),
-      "relationship_SystemUserEntityRelationshipId": OOPAttributeString.descriptions(["en":""]),
-      "relationship_SystemUserGroupEntityRelationshipId": OOPAttributeString.descriptions(["en":""]),
-      "backingTable_UserGroupListRelationshipId": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DADMUserGroupUserList : DOOPEntity {
+  mixin(OOPEntityThis!("ADMUserGroupUserList"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "groupId": OOPAttributeString.descriptions(["en":""]),
+        "userId": OOPAttributeString.descriptions(["en":""]),
+        "relationship_SystemUserEntityRelationshipId": OOPAttributeString.descriptions(["en":""]),
+        "relationship_SystemUserGroupEntityRelationshipId": OOPAttributeString.descriptions(["en":""]),
+        "backingTable_UserGroupListRelationshipId": OOPAttributeString.descriptions(["en":""]),
+      ])
+      .registerPath("admin_usergroupuserlists");
   }
-
-  override string entityClass() { return "aDMUserGroupUserListEntity"; }
-  override string entityClasses() { return "aDMUserGroupUserListEntities"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMUserGroupUserListEntity() { return new DADMUserGroupUserListEntity; } 
-auto ADMUserGroupUserListEntity(Json json) { return new DADMUserGroupUserListEntity(json); } 
-
+mixin(OOPEntityCalls!("ADMUserGroupUserList"));
 unittest {
   version(uim_entities) {
-    assert(ADMUserGroupUserListEntity);
+    assert(ADMUserGroupUserList);
   
-  auto entity = ADMUserGroupUserListEntity;
+  auto entity = ADMUserGroupUserList;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

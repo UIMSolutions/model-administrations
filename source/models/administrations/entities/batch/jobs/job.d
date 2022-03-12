@@ -4,42 +4,35 @@ module models.administrations.entities.batch.jobs.job;
 import models.administrations;
 
 class DADMBatchJob : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "CanceledBy":OOPAttributeUserId.descriptions(["en":""]),
-      "JobDescription": OOPAttributeString.descriptions(["en":""]),
-      "CompanyAccounts": OOPAttributeString.descriptions(["en":""]),
-      "PartitionKey": OOPAttributeString.descriptions(["en":""]),
-      "EndDateTime": OOPAttributeString.descriptions(["en":""]),
-      "Finishing": OOPAttributeString.descriptions(["en":""]),
-      "SaveJobToHistory": OOPAttributeString.descriptions(["en":""]),
-      "OrigStartDateTime": OOPAttributeString.descriptions(["en":""]),
-      "Recurrence": OOPAttributeString.descriptions(["en":""]),
-      "RuntimeJob": OOPAttributeString.descriptions(["en":""]),
-      "StartDateTime": OOPAttributeString.descriptions(["en":""]),
-      "Status": OOPAttributeString.descriptions(["en":""]),
-      "StartDate": OOPAttributeString.descriptions(["en":""]),
-      "StartTime": OOPAttributeString.descriptions(["en":""]),
-      "BatchJobRecId": OOPAttributeUUID.descriptions(["en":""]),
-      "ExecutingBy":OOPAttributeUserId.descriptions(["en":""]),
-      "backingTable_BatchJobRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMBatchJob"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "CanceledBy":OOPAttributeUserId.descriptions(["en":""]),
+        "JobDescription": OOPAttributeString.descriptions(["en":""]),
+        "CompanyAccounts": OOPAttributeString.descriptions(["en":""]),
+        "PartitionKey": OOPAttributeString.descriptions(["en":""]),
+        "EndDateTime": OOPAttributeString.descriptions(["en":""]),
+        "Finishing": OOPAttributeString.descriptions(["en":""]),
+        "SaveJobToHistory": OOPAttributeString.descriptions(["en":""]),
+        "OrigStartDateTime": OOPAttributeString.descriptions(["en":""]),
+        "Recurrence": OOPAttributeString.descriptions(["en":""]),
+        "RuntimeJob": OOPAttributeString.descriptions(["en":""]),
+        "StartDateTime": OOPAttributeString.descriptions(["en":""]),
+        "Status": OOPAttributeString.descriptions(["en":""]),
+        "StartDate": OOPAttributeString.descriptions(["en":""]),
+        "StartTime": OOPAttributeString.descriptions(["en":""]),
+        "BatchJobRecId": OOPAttributeUUID.descriptions(["en":""]),
+        "ExecutingBy":OOPAttributeUserId.descriptions(["en":""]),
+        "backingTable_BatchJobRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_batchjobs");
   }
-
-  override string entityClass() { return "admBatchJob"; }
-  override string entityClasses() { return "admBatchJobs"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMBatchJob() { return new DADMBatchJob; } 
-auto ADMBatchJob(Json json) { return new DADMBatchJob(json); } 
+mixin(OOPEntityCalls!("ADMBatchJob"));
 
 unittest {
   version(uim_entities) {

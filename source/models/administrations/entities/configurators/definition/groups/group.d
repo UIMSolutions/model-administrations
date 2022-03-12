@@ -4,30 +4,23 @@ module models.administrations.entities.configurators.definition.groups.group;
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroup : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-      "isQueryBased": OOPAttributeString.descriptions(["en":""]),
-      "queryTitle": OOPAttributeString.descriptions(["en":""]),
-      "backingTable_ConfTable_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroup"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
+        "isQueryBased": OOPAttributeString.descriptions(["en":""]),
+        "queryTitle": OOPAttributeString.descriptions(["en":""]),
+        "backingTable_ConfTable_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_configuratordefinitiongroups");
   }
-
-  override string entityClass() { return "admConfiguratorDefinitionGroup"; }
-  override string entityClasses() { return "admConfiguratorDefinitionGroups"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMConfiguratorDefinitionGroup() { return new DADMConfiguratorDefinitionGroup; } 
-auto ADMConfiguratorDefinitionGroup(Json json) { return new DADMConfiguratorDefinitionGroup(json); } 
+mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroup"));
 
 unittest {
   version(uim_entities) {

@@ -4,39 +4,32 @@ module models.administrations.entities.policies.rule_type;
 import models.administrations;
 
 // 
-class DADMPolicyRuleTypeEntity : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "includeParentRule": OOPAttributeString.descriptions(["en":""]),
-      "isPrecedenceSupported": OOPAttributeString.descriptions(["en":""]),
-      "ruleName": OOPAttributeString.descriptions(["en":""]),
-      "policyTypeRel": OOPAttributeString.descriptions(["en":""]),
-      "policyType": OOPAttributeString.descriptions(["en":""]),
-      "policyName": OOPAttributeString.descriptions(["en":""]),
-      "backingTable_SysPolicyRuleTypeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+class DADMPolicyRuleType : DOOPEntity {
+  mixin(OOPEntityThis!("ADMPolicyRuleType"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "includeParentRule": OOPAttributeString.descriptions(["en":""]),
+        "isPrecedenceSupported": OOPAttributeString.descriptions(["en":""]),
+        "ruleName": OOPAttributeString.descriptions(["en":""]),
+        "policyTypeRel": OOPAttributeString.descriptions(["en":""]),
+        "policyType": OOPAttributeString.descriptions(["en":""]),
+        "policyName": OOPAttributeString.descriptions(["en":""]),
+        "backingTable_SysPolicyRuleTypeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_policyruletypes");
   }
-
-  override string entityClass() { return "aDMPolicyRuleTypeEntity"; }
-  override string entityClasses() { return "aDMPolicyRuleTypeEntities"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMPolicyRuleTypeEntity() { return new DADMPolicyRuleTypeEntity; } 
-auto ADMPolicyRuleTypeEntity(Json json) { return new DADMPolicyRuleTypeEntity(json); } 
+mixin(OOPEntityCalls!("ADMPolicyRuleType"));
 
 unittest {
   version(uim_entities) {
-    assert(ADMPolicyRuleTypeEntity);
+    assert(ADMPolicyRuleType);
   
-  auto entity = ADMPolicyRuleTypeEntity;
+  auto entity = ADMPolicyRuleType;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

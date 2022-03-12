@@ -5,36 +5,29 @@ import models.administrations;
 
 // 
 class DADMPolicyOrganization : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "hierarchyType": OOPAttributeString.descriptions(["en":""]),
-      "hierarchyName": OOPAttributeString.descriptions(["en":""]),
-      "organization": OOPAttributeString.descriptions(["en":""]),
-      "partyNumber": OOPAttributeString.descriptions(["en":""]),
-      "policy": OOPAttributeString.descriptions(["en":""]),
-      "policyName": OOPAttributeString.descriptions(["en":""]),
-      "policyTypeRel": OOPAttributeString.descriptions(["en":""]),
-      "policyType": OOPAttributeString.descriptions(["en":""]),
-      "validFrom": OOPAttributeString.descriptions(["en":""]),
-      "validTo": OOPAttributeString.descriptions(["en":""]),
-      "backingTable_SysPolicyOrganizationRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMPolicyOrganization"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "hierarchyType": OOPAttributeString.descriptions(["en":""]),
+        "hierarchyName": OOPAttributeString.descriptions(["en":""]),
+        "organization": OOPAttributeString.descriptions(["en":""]),
+        "partyNumber": OOPAttributeString.descriptions(["en":""]),
+        "policy": OOPAttributeString.descriptions(["en":""]),
+        "policyName": OOPAttributeString.descriptions(["en":""]),
+        "policyTypeRel": OOPAttributeString.descriptions(["en":""]),
+        "policyType": OOPAttributeString.descriptions(["en":""]),
+        "validFrom": OOPAttributeString.descriptions(["en":""]),
+        "validTo": OOPAttributeString.descriptions(["en":""]),
+        "backingTable_SysPolicyOrganizationRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_policyorganizations");
   }
-
-  override string entityClass() { return "aDMPolicyOrganization"; }
-  override string entityClasses() { return "aDMPolicyOrganizations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMPolicyOrganization() { return new DADMPolicyOrganization; } 
-auto ADMPolicyOrganization(Json json) { return new DADMPolicyOrganization(json); } 
+mixin(OOPEntityCalls!("ADMPolicyOrganization"));
 
 unittest {
   version(uim_entities) {

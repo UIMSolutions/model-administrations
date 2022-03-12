@@ -5,30 +5,23 @@ import models.administrations;
 
 // 
 class DADMPolicy : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "IsPolicyActive": OOPAttributeString.descriptions(["en":""]),
-      "PolicyName": OOPAttributeString.descriptions(["en":""]),
-      "PolicyTypeRecId": OOPAttributeUUID.descriptions(["en":""]),
-      "PolicyType": OOPAttributeString.descriptions(["en":""]),
-      "BackingTable_SysPolicyRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMPolicy"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "IsPolicyActive": OOPAttributeString.descriptions(["en":""]),
+        "PolicyName": OOPAttributeString.descriptions(["en":""]),
+        "PolicyTypeRecId": OOPAttributeUUID.descriptions(["en":""]),
+        "PolicyType": OOPAttributeString.descriptions(["en":""]),
+        "BackingTable_SysPolicyRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_policies");
   }
-
-  override string entityClass() { return "aDMPolicy"; }
-  override string entityClasses() { return "aDMPolicies"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMPolicy() { return new DADMPolicy; } 
-auto ADMPolicy(Json json) { return new DADMPolicy(json); } 
+mixin(OOPEntityCalls!("ADMPolicy"));
 
 unittest {
   version(uim_entities) {

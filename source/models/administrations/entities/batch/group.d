@@ -4,27 +4,20 @@ module models.administrations.entities.batch.group;
 import models.administrations;
 
 class DADMBatchGroup : DOOPEntity {
-  this() { super();
-    this.attributes([      
-      "serverId": OOPAttributeUUID.descriptions(["en":""]),
-      "backingTable_BatchGroupRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMBatchGroup"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([  
+        "serverId": OOPAttributeUUID.descriptions(["en":""]),
+        "backingTable_BatchGroupRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_batchgroups");
   }
-
-  override string entityClass() { return "admBatchGroup"; }
-  override string entityClasses() { return "admBatchGroups"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMBatchGroup() { return new DADMBatchGroup; } 
-auto ADMBatchGroup(Json json) { return new DADMBatchGroup(json); } 
+mixin(OOPEntityCalls!("ADMBatchGroup"));
 
 unittest {
   version(uim_entities) {

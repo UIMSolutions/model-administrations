@@ -5,31 +5,24 @@ import models.administrations;
 
 // 
 class DADMSecurityUserRoleAssociation : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "AssignmentMode": OOPAttributeString.descriptions(["en":""]),
-      "AssignmentStatus": OOPAttributeString.descriptions(["en":""]),
-      "SecurityRole": OOPAttributeString.descriptions(["en":""]),
-      "UserId": OOPAttributeString.descriptions(["en":""]),
-      "SecurityRoleId": OOPAttributeString.descriptions(["en":""]),
-      "SecurityRoleName": OOPAttributeString.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMSecurityUserRoleAssociation"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "AssignmentMode": OOPAttributeString.descriptions(["en":""]),
+        "AssignmentStatus": OOPAttributeString.descriptions(["en":""]),
+        "SecurityRole": OOPAttributeString.descriptions(["en":""]),
+        "UserId": OOPAttributeString.descriptions(["en":""]),
+        "SecurityRoleId": OOPAttributeString.descriptions(["en":""]),
+        "SecurityRoleName": OOPAttributeString.descriptions(["en":""]),
+      ])
+      .registerPath("admin_securityuserroleassociation");
   }
-
-  override string entityClass() { return "aDMSecurityUserRoleAssociation"; }
-  override string entityClasses() { return "aDMSecurityUserRoleAssociations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMSecurityUserRoleAssociation() { return new DADMSecurityUserRoleAssociation; } 
-auto ADMSecurityUserRoleAssociation(Json json) { return new DADMSecurityUserRoleAssociation(json); } 
+mixin(OOPEntityCalls!("ADMSecurityUserRoleAssociation"));
 
 unittest {
   version(uim_entities) {

@@ -4,30 +4,23 @@ module models.administrations.entities.cases.dependency;
 import models.administrations;
 
 class DADMCaseDependency : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "Case": OOPAttributeString.descriptions(["en":""]),
-      "ParentCase": OOPAttributeString.descriptions(["en":""]),
-      "CaseId": OOPAttributeUUID.descriptions(["en":""]),
-      "ParentCaseId": OOPAttributeUUID.descriptions(["en":""]),
-      "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMCaseDependency"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "Case": OOPAttributeString.descriptions(["en":""]),
+        "ParentCase": OOPAttributeString.descriptions(["en":""]),
+        "CaseId": OOPAttributeUUID.descriptions(["en":""]),
+        "ParentCaseId": OOPAttributeUUID.descriptions(["en":""]),
+        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_casedependencies");
   }
-
-  override string entityClass() { return "admCaseDependency"; }
-  override string entityClasses() { return "admCaseDependencies"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMCaseDependency() { return new DADMCaseDependency; } 
-auto ADMCaseDependency(Json json) { return new DADMCaseDependency(json); } 
+mixin(OOPEntityCalls!("ADMCaseDependency"));
 
 unittest {
   version(uim_entities) {

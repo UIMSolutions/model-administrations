@@ -5,32 +5,25 @@ import models.administrations;
 
 // 
 class DADMGroup : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "userId": OOPAttributeUUID.descriptions(["en":""]),
-      "objectId": OOPAttributeUUID.descriptions(["en":""]),
-      "enabled": OOPAttributeString.descriptions(["en":""]),
-      "company": OOPAttributeString.descriptions(["en":""]),
-      "language": OOPAttributeString.descriptions(["en":""]),
-      "preferredTimeZone": OOPAttributeString.descriptions(["en":""]),
-      "preferredCalendar": OOPAttributeString.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMGroup"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "userId": OOPAttributeUUID.descriptions(["en":""]),
+        "objectId": OOPAttributeUUID.descriptions(["en":""]),
+        "enabled": OOPAttributeString.descriptions(["en":""]),
+        "company": OOPAttributeString.descriptions(["en":""]),
+        "language": OOPAttributeString.descriptions(["en":""]),
+        "preferredTimeZone": OOPAttributeString.descriptions(["en":""]),
+        "preferredCalendar": OOPAttributeString.descriptions(["en":""]),
+      ])
+      .registerPath("admin_groups");
   }
-
-  override string entityClass() { return "aDMGroup"; }
-  override string entityClasses() { return "aDMGroups"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMGroup() { return new DADMGroup; } 
-auto ADMGroup(Json json) { return new DADMGroup(json); } 
+mixin(OOPEntityCalls!("ADMGroup"));
 
 unittest {
   version(uim_entities) {

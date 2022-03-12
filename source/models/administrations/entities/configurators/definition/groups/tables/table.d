@@ -5,33 +5,26 @@ import models.administrations;
 
 // 
 class DADMConfiguratorDefinitionGroupTable : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "DefinitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-      "DataSourceNumber": OOPAttributeString.descriptions(["en":""]),
-      "RelatedTableName": OOPAttributeString.descriptions(["en":""]),
-      "SysRelation": OOPAttributeString.descriptions(["en":""]),
-      "TableName": OOPAttributeString.descriptions(["en":""]),
-      "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "backingTable_ConfTableSelection_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupTable"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "DefinitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
+        "DataSourceNumber": OOPAttributeString.descriptions(["en":""]),
+        "RelatedTableName": OOPAttributeString.descriptions(["en":""]),
+        "SysRelation": OOPAttributeString.descriptions(["en":""]),
+        "TableName": OOPAttributeString.descriptions(["en":""]),
+        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "backingTable_ConfTableSelection_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_configuratordefinitiongrouptables");
   }
-
-  override string entityClass() { return "admConfiguratorDefinitionGroupTable"; }
-  override string entityClasses() { return "admConfiguratorDefinitionGroupTables"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMConfiguratorDefinitionGroupTable() { return new DADMConfiguratorDefinitionGroupTable; } 
-auto ADMConfiguratorDefinitionGroupTable(Json json) { return new DADMConfiguratorDefinitionGroupTable(json); } 
+mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupTable"));
 
 unittest {
   version(uim_entities) {

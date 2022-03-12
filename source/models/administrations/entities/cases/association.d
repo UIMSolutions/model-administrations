@@ -4,34 +4,27 @@ module models.administrations.entities.cases.association;
 import models.administrations;
 
 class DADMCaseAssociation : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "AssociationCompany": OOPAttributeString.descriptions(["en":""]),
-      "AssociationId": OOPAttributeUUID.descriptions(["en":""]),
-      "CaseId": OOPAttributeUUID.descriptions(["en":""]),
-      "CaseRecId": OOPAttributeUUID.descriptions(["en":""]),
-      "EntityType": OOPAttributeString.descriptions(["en":""]),
-      "isPrimary": OOPAttributeString.descriptions(["en":""]),
-      "Reference": OOPAttributeString.descriptions(["en":""]),
-      "Relationship_CaseDetailEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-      "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMCaseAssociation"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "AssociationCompany": OOPAttributeString.descriptions(["en":""]),
+        "AssociationId": OOPAttributeUUID.descriptions(["en":""]),
+        "CaseId": OOPAttributeUUID.descriptions(["en":""]),
+        "CaseRecId": OOPAttributeUUID.descriptions(["en":""]),
+        "EntityType": OOPAttributeString.descriptions(["en":""]),
+        "isPrimary": OOPAttributeString.descriptions(["en":""]),
+        "Reference": OOPAttributeString.descriptions(["en":""]),
+        "Relationship_CaseDetailEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_caseassociationS");
   }
-
-  override string entityClass() { return "admCaseAssociation"; }
-  override string entityClasses() { return "admCaseAssociations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMCaseAssociation() { return new DADMCaseAssociation; } 
-auto ADMCaseAssociation(Json json) { return new DADMCaseAssociation(json); } 
+mixin(OOPEntityCalls!("ADMCaseAssociation"));
 
 unittest {
   version(uim_entities) {

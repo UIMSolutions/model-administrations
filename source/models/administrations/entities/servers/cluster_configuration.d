@@ -5,26 +5,19 @@ import models.administrations;
 
 // 
 class DADMServerClusterConfiguration : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "backingTable_SysClusterConfigRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMServerClusterConfiguration"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "backingTable_SysClusterConfigRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      ])
+      .registerPath("admin_serverclusterconfigurations");
   }
-
-  override string entityClass() { return "aDMServerClusterConfiguration"; }
-  override string entityClasses() { return "aDMServerClusterConfigurations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMServerClusterConfiguration() { return new DADMServerClusterConfiguration; } 
-auto ADMServerClusterConfiguration(Json json) { return new DADMServerClusterConfiguration(json); } 
+mixin(OOPEntityCalls!("ADMServerClusterConfiguration"));
 
 unittest {
   version(uim_entities) {

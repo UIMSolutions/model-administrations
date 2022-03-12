@@ -5,28 +5,21 @@ import models.administrations;
 
 // 
 class DADMGlobalConfiguration : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "aosInstanceName": OOPAttributeString.descriptions(["en":""]),
-      "settingLevel": OOPAttributeString.descriptions(["en":""]),
-      "value": OOPAttributeString.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("ADMGlobalConfiguration"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
+        "aosInstanceName": OOPAttributeString.descriptions(["en":""]),
+        "settingLevel": OOPAttributeString.descriptions(["en":""]),
+        "value": OOPAttributeString.descriptions(["en":""]),
+      ])
+      .registerPath("admin_globalconfigurations");
   }
-
-  override string entityClass() { return "aDMGlobalConfiguration"; }
-  override string entityClasses() { return "aDMGlobalConfigurations"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto ADMGlobalConfiguration() { return new DADMGlobalConfiguration; } 
-auto ADMGlobalConfiguration(Json json) { return new DADMGlobalConfiguration(json); } 
+mixin(OOPEntityCalls!("ADMGlobalConfiguration"));
 
 unittest {
   version(uim_entities) {
