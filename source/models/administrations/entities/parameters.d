@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMParameters : DOOPEntity {
-  mixin(OOPEntityThis!("ADMParameters"));
+  mixin(EntityThis!("ADMParameters"));
 
   override void initialize() {
     super.initialize;
@@ -26,7 +26,7 @@ class DADMParameters : DOOPEntity {
       .registerPath("admin_parameters");
   }
 }
-mixin(OOPEntityCalls!("ADMParameters"));
+mixin(EntityCalls!("ADMParameters"));
 
 unittest {
   version(uim_entities) {

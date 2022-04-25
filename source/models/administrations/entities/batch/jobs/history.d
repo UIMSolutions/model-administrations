@@ -4,7 +4,7 @@ module models.administrations.entities.batch.jobs.history;
 import models.administrations;
 
 class DADMBatchJobHistory : DOOPEntity {
-  mixin(OOPEntityThis!("ADMBatchJobHistory"));
+  mixin(EntityThis!("ADMBatchJobHistory"));
 
   override void initialize() {
     super.initialize;
@@ -28,7 +28,7 @@ class DADMBatchJobHistory : DOOPEntity {
       .registerPath("admin_batchjobhistories");
   }
 }
-mixin(OOPEntityCalls!("ADMBatchJobHistory"));
+mixin(EntityCalls!("ADMBatchJobHistory"));
 
 unittest {
   version(uim_entities) {

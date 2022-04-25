@@ -4,7 +4,7 @@ module models.administrations.entities.configurators.definition.groups.sort_orde
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroupSortOrder : DOOPEntity {
-  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupSortOrder"));
+  mixin(EntityThis!("ADMConfiguratorDefinitionGroupSortOrder"));
 
   override void initialize() {
     super.initialize;
@@ -23,7 +23,7 @@ class DADMConfiguratorDefinitionGroupSortOrder : DOOPEntity {
       .registerPath("admin_configuratordefinitiongroupsortorders");
   }
 }
-mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupSortOrder"));
+mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSortOrder"));
 
 unittest {
   version(uim_entities) {

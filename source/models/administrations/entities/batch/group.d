@@ -4,7 +4,7 @@ module models.administrations.entities.batch.group;
 import models.administrations;
 
 class DADMBatchGroup : DOOPEntity {
-  mixin(OOPEntityThis!("ADMBatchGroup"));
+  mixin(EntityThis!("ADMBatchGroup"));
 
   override void initialize() {
     super.initialize;
@@ -17,7 +17,7 @@ class DADMBatchGroup : DOOPEntity {
       .registerPath("admin_batchgroups");
   }
 }
-mixin(OOPEntityCalls!("ADMBatchGroup"));
+mixin(EntityCalls!("ADMBatchGroup"));
 
 unittest {
   version(uim_entities) {

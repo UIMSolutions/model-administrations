@@ -4,7 +4,7 @@ module models.administrations.entities.cases.association;
 import models.administrations;
 
 class DADMCaseAssociation : DOOPEntity {
-  mixin(OOPEntityThis!("ADMCaseAssociation"));
+  mixin(EntityThis!("ADMCaseAssociation"));
 
   override void initialize() {
     super.initialize;
@@ -24,7 +24,7 @@ class DADMCaseAssociation : DOOPEntity {
       .registerPath("admin_caseassociationS");
   }
 }
-mixin(OOPEntityCalls!("ADMCaseAssociation"));
+mixin(EntityCalls!("ADMCaseAssociation"));
 
 unittest {
   version(uim_entities) {

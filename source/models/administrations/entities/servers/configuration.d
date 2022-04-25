@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMServerConfiguration : DOOPEntity {
-  mixin(OOPEntityThis!("ADMServerConfiguration"));
+  mixin(EntityThis!("ADMServerConfiguration"));
 
   override void initialize() {
     super.initialize;
@@ -27,7 +27,7 @@ class DADMServerConfiguration : DOOPEntity {
       .registerPath("admin_serverconfigurations");
   }
 }
-mixin(OOPEntityCalls!("ADMServerConfiguration"));
+mixin(EntityCalls!("ADMServerConfiguration"));
 
 unittest {
   version(uim_entities) {

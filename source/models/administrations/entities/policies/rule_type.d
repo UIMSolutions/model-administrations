@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMPolicyRuleType : DOOPEntity {
-  mixin(OOPEntityThis!("ADMPolicyRuleType"));
+  mixin(EntityThis!("ADMPolicyRuleType"));
 
   override void initialize() {
     super.initialize;
@@ -23,7 +23,7 @@ class DADMPolicyRuleType : DOOPEntity {
       .registerPath("admin_policyruletypes");
   }
 }
-mixin(OOPEntityCalls!("ADMPolicyRuleType"));
+mixin(EntityCalls!("ADMPolicyRuleType"));
 
 unittest {
   version(uim_entities) {

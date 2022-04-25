@@ -4,7 +4,7 @@ module models.administrations.entities.batch.server_schedule;
 import models.administrations;
 
 class DADMBatchServerSchedule : DOOPEntity {
-  mixin(OOPEntityThis!("ADMBatchServerSchedule"));
+  mixin(EntityThis!("ADMBatchServerSchedule"));
 
   override void initialize() {
     super.initialize;
@@ -20,7 +20,7 @@ class DADMBatchServerSchedule : DOOPEntity {
       .registerPath("admin_batchserverschedules");
   }
 }
-mixin(OOPEntityCalls!("ADMBatchServerSchedule"));
+mixin(EntityCalls!("ADMBatchServerSchedule"));
 
 unittest {
   version(uim_entities) {

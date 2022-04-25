@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMConfiguratorDefinitionGroupTable : DOOPEntity {
-  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupTable"));
+  mixin(EntityThis!("ADMConfiguratorDefinitionGroupTable"));
 
   override void initialize() {
     super.initialize;
@@ -24,7 +24,7 @@ class DADMConfiguratorDefinitionGroupTable : DOOPEntity {
       .registerPath("admin_configuratordefinitiongrouptables");
   }
 }
-mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupTable"));
+mixin(EntityCalls!("ADMConfiguratorDefinitionGroupTable"));
 
 unittest {
   version(uim_entities) {

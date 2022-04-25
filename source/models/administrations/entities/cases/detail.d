@@ -4,7 +4,7 @@ module models.administrations.entities.cases.detail;
 import models.administrations;
 
 class DADMCaseDetailBase : DOOPEntity {
-  mixin(OOPEntityThis!("ADMCaseDetailBase"));
+  mixin(EntityThis!("ADMCaseDetailBase"));
 
   override void initialize() {
     super.initialize;
@@ -65,7 +65,7 @@ class DADMCaseDetailBase : DOOPEntity {
       .registerPath("admin_casedetailbases");
   }
 }
-mixin(OOPEntityCalls!("ADMCaseDetailBase"));
+mixin(EntityCalls!("ADMCaseDetailBase"));
 
 unittest {
   version(uim_entities) {

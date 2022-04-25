@@ -4,7 +4,7 @@ module models.administrations.entities.configurators.definition.groups.group;
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroup : DOOPEntity {
-  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroup"));
+  mixin(EntityThis!("ADMConfiguratorDefinitionGroup"));
 
   override void initialize() {
     super.initialize;
@@ -20,7 +20,7 @@ class DADMConfiguratorDefinitionGroup : DOOPEntity {
       .registerPath("admin_configuratordefinitiongroups");
   }
 }
-mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroup"));
+mixin(EntityCalls!("ADMConfiguratorDefinitionGroup"));
 
 unittest {
   version(uim_entities) {

@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMUserGroup : DOOPEntity {
-  mixin(OOPEntityThis!("ADMUserGroup"));
+  mixin(EntityThis!("ADMUserGroup"));
 
   override void initialize() {
     super.initialize;
@@ -17,7 +17,7 @@ class DADMUserGroup : DOOPEntity {
       .registerPath("admin_usergroups");
   }
 }
-mixin(OOPEntityCalls!("ADMUserGroup"));
+mixin(EntityCalls!("ADMUserGroup"));
 
 unittest {
   version(uim_entities) {

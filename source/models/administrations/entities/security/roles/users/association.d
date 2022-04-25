@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMSecurityUserRoleAssociation : DOOPEntity {
-  mixin(OOPEntityThis!("ADMSecurityUserRoleAssociation"));
+  mixin(EntityThis!("ADMSecurityUserRoleAssociation"));
 
   override void initialize() {
     super.initialize;
@@ -22,7 +22,7 @@ class DADMSecurityUserRoleAssociation : DOOPEntity {
       .registerPath("admin_securityuserroleassociation");
   }
 }
-mixin(OOPEntityCalls!("ADMSecurityUserRoleAssociation"));
+mixin(EntityCalls!("ADMSecurityUserRoleAssociation"));
 
 unittest {
   version(uim_entities) {

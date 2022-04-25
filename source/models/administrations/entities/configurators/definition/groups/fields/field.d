@@ -4,7 +4,7 @@ module models.administrations.entities.configurators.definition.groups.fields.fi
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroupField : DOOPEntity {
-  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupField"));
+  mixin(EntityThis!("ADMConfiguratorDefinitionGroupField"));
 
   override void initialize() {
     super.initialize;
@@ -24,7 +24,7 @@ class DADMConfiguratorDefinitionGroupField : DOOPEntity {
       .registerPath("admin_configuratordefinitiongroupfields");
   }
 }
-mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupField"));
+mixin(EntityCalls!("ADMConfiguratorDefinitionGroupField"));
 
 unittest {
   version(uim_entities) {

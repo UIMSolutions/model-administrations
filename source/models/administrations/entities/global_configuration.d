@@ -5,7 +5,7 @@ import models.administrations;
 
 // 
 class DADMGlobalConfiguration : DOOPEntity {
-  mixin(OOPEntityThis!("ADMGlobalConfiguration"));
+  mixin(EntityThis!("ADMGlobalConfiguration"));
 
   override void initialize() {
     super.initialize;
@@ -19,7 +19,7 @@ class DADMGlobalConfiguration : DOOPEntity {
       .registerPath("admin_globalconfigurations");
   }
 }
-mixin(OOPEntityCalls!("ADMGlobalConfiguration"));
+mixin(EntityCalls!("ADMGlobalConfiguration"));
 
 unittest {
   version(uim_entities) {

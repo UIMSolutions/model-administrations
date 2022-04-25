@@ -4,7 +4,7 @@ module models.administrations.entities.configurators.definition.groups.summation
 import models.administrations;
 
 class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
-  mixin(OOPEntityThis!("ADMConfiguratorDefinitionGroupSummation"));
+  mixin(EntityThis!("ADMConfiguratorDefinitionGroupSummation"));
 
   override void initialize() {
     super.initialize;
@@ -27,7 +27,7 @@ class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
       .registerPath("admin_configuratordefinitiongroupsummation");
   }
 }
-mixin(OOPEntityCalls!("ADMConfiguratorDefinitionGroupSummation"));
+mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSummation"));
 
 unittest {
   version(uim_entities) {

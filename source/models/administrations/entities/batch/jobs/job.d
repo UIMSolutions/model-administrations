@@ -4,7 +4,7 @@ module models.administrations.entities.batch.jobs.job;
 import models.administrations;
 
 class DADMBatchJob : DOOPEntity {
-  mixin(OOPEntityThis!("ADMBatchJob"));
+  mixin(EntityThis!("ADMBatchJob"));
 
   override void initialize() {
     super.initialize;
@@ -32,7 +32,7 @@ class DADMBatchJob : DOOPEntity {
       .registerPath("admin_batchjobs");
   }
 }
-mixin(OOPEntityCalls!("ADMBatchJob"));
+mixin(EntityCalls!("ADMBatchJob"));
 
 unittest {
   version(uim_entities) {

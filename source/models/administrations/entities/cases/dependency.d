@@ -4,7 +4,7 @@ module models.administrations.entities.cases.dependency;
 import models.administrations;
 
 class DADMCaseDependency : DOOPEntity {
-  mixin(OOPEntityThis!("ADMCaseDependency"));
+  mixin(EntityThis!("ADMCaseDependency"));
 
   override void initialize() {
     super.initialize;
@@ -20,7 +20,7 @@ class DADMCaseDependency : DOOPEntity {
       .registerPath("admin_casedependencies");
   }
 }
-mixin(OOPEntityCalls!("ADMCaseDependency"));
+mixin(EntityCalls!("ADMCaseDependency"));
 
 unittest {
   version(uim_entities) {
