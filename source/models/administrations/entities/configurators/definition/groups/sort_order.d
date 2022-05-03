@@ -10,15 +10,15 @@ class DADMConfiguratorDefinitionGroupSortOrder : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "fieldName": OOPAttributeString.descriptions(["en":""]),
-        "sortingNumber": OOPAttributeString.descriptions(["en":""]),
-        "sortOrder": OOPAttributeString.descriptions(["en":""]),
-        "tableName": OOPAttributeString.descriptions(["en":""]),
-        "relationship_ConfiguratorDefinitionGroupSortOrderEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_ConfSortOrder_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "definitionGroupId": UUIDAttributeClass, // 
+        "fieldName": StringAttributeClass, // 
+        "sortingNumber": StringAttributeClass, // 
+        "sortOrder": StringAttributeClass, // 
+        "tableName": StringAttributeClass, // 
+        "relationship_ConfiguratorDefinitionGroupSortOrderEntityRelationshipId": UUIDAttributeClass, // 
+        "backingTable_ConfSortOrder_BRRelationshipId": UUIDAttributeClass, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_configuratordefinitiongroupsortorders");
   }

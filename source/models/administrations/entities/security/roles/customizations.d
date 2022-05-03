@@ -11,10 +11,10 @@ class DADMSecurityRoleCustomization : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-      "identifier": OOPAttributeString.descriptions(["en":""]),
-      "xmlObject": OOPAttributeString.descriptions(["en":""]),
-      "isDisabled": OOPAttributeBoolean.descriptions(["en":""]),
+      .addValues([
+      "identifier": StringAttributeClass, // 
+      "xmlObject": StringAttributeClass, // 
+      "isDisabled": BooleanAttributeClass, // 
       ])
       .registerPath("admin_securityrolecustomizations");
   }

@@ -11,12 +11,12 @@ class DADMPolicy : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "IsPolicyActive": OOPAttributeString.descriptions(["en":""]),
-        "PolicyName": OOPAttributeString.descriptions(["en":""]),
-        "PolicyTypeRecId": OOPAttributeUUID.descriptions(["en":""]),
-        "PolicyType": OOPAttributeString.descriptions(["en":""]),
-        "BackingTable_SysPolicyRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "IsPolicyActive": StringAttributeClass, // 
+        "PolicyName": StringAttributeClass, // 
+        "PolicyTypeRecId": UUIDAttributeClass, // 
+        "PolicyType": StringAttributeClass, // 
+        "BackingTable_SysPolicyRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_policies");
   }

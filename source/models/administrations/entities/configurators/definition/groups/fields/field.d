@@ -10,16 +10,16 @@ class DADMConfiguratorDefinitionGroupField : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "dataSourceNumber": OOPAttributeString.descriptions(["en":""]),
-        "fieldGroup": OOPAttributeString.descriptions(["en":""]),
-        "fieldName": OOPAttributeString.descriptions(["en":""]),
-        "sortOrder": OOPAttributeString.descriptions(["en":""]),
-        "tableName": OOPAttributeString.descriptions(["en":""]),
-        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_ConfDefinitions_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "definitionGroupId": UUIDAttributeClass, // 
+        "dataSourceNumber": StringAttributeClass, // 
+        "fieldGroup": StringAttributeClass, // 
+        "fieldName": StringAttributeClass, // 
+        "sortOrder": StringAttributeClass, // 
+        "tableName": StringAttributeClass, // 
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
+        "backingTable_ConfDefinitions_BRRelationshipId": UUIDAttributeClass, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_configuratordefinitiongroupfields");
   }

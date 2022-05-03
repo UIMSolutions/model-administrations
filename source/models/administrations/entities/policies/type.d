@@ -11,14 +11,14 @@ class DADMPolicyType : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "policyName": OOPAttributeString.descriptions(["en":""]),
-        "purpose": OOPAttributeString.descriptions(["en":""]),
-        "dropDialog": OOPAttributeString.descriptions(["en":""]),
-        "isPolicyReadOnly": OOPAttributeString.descriptions(["en":""]),
-        "isReassignOrganizationSupported": OOPAttributeString.descriptions(["en":""]),
-        "policyType": OOPAttributeString.descriptions(["en":""]),
-        "backingTable_SysPolicyTypeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "policyName": StringAttributeClass, // 
+        "purpose": StringAttributeClass, // 
+        "dropDialog": StringAttributeClass, // 
+        "isPolicyReadOnly": StringAttributeClass, // 
+        "isReassignOrganizationSupported": StringAttributeClass, // 
+        "policyType": StringAttributeClass, // 
+        "backingTable_SysPolicyTypeRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_policytypes");
   }

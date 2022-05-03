@@ -11,8 +11,8 @@ class DADMUserGroup : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "backingTable_UserGroupInfoRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "backingTable_UserGroupInfoRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_usergroups");
   }

@@ -10,24 +10,24 @@ class DADMBatchJob : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "CanceledBy":OOPAttributeUserId.descriptions(["en":""]),
-        "JobDescription": OOPAttributeString.descriptions(["en":""]),
-        "CompanyAccounts": OOPAttributeString.descriptions(["en":""]),
-        "PartitionKey": OOPAttributeString.descriptions(["en":""]),
-        "EndDateTime": OOPAttributeString.descriptions(["en":""]),
-        "Finishing": OOPAttributeString.descriptions(["en":""]),
-        "SaveJobToHistory": OOPAttributeString.descriptions(["en":""]),
-        "OrigStartDateTime": OOPAttributeString.descriptions(["en":""]),
-        "Recurrence": OOPAttributeString.descriptions(["en":""]),
-        "RuntimeJob": OOPAttributeString.descriptions(["en":""]),
-        "StartDateTime": OOPAttributeString.descriptions(["en":""]),
-        "Status": OOPAttributeString.descriptions(["en":""]),
-        "StartDate": OOPAttributeString.descriptions(["en":""]),
-        "StartTime": OOPAttributeString.descriptions(["en":""]),
-        "BatchJobRecId": OOPAttributeUUID.descriptions(["en":""]),
-        "ExecutingBy":OOPAttributeUserId.descriptions(["en":""]),
-        "backingTable_BatchJobRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "CanceledBy":UserIdAttributeClass, // 
+        "JobDescription": StringAttributeClass, // 
+        "CompanyAccounts": StringAttributeClass, // 
+        "PartitionKey": StringAttributeClass, // 
+        "EndDateTime": DatetimeAttributeClass, //  
+        "Finishing": StringAttributeClass, // 
+        "SaveJobToHistory": StringAttributeClass, // 
+        "OrigStartDateTime": DatetimeAttributeClass, //  
+        "Recurrence": StringAttributeClass, // 
+        "RuntimeJob": StringAttributeClass, // 
+        "StartDateTime": DatetimeAttributeClass, //  
+        "Status": StringAttributeClass, // 
+        "StartDate": StringAttributeClass, // 
+        "StartTime": StringAttributeClass, // 
+        "BatchJobRecId": UUIDAttributeClass, // 
+        "ExecutingBy":UserIdAttributeClass, // 
+        "backingTable_BatchJobRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_batchjobs");
   }

@@ -11,15 +11,15 @@ class DADMConfiguratorDefinitionGroupTable : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "DefinitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "DataSourceNumber": OOPAttributeString.descriptions(["en":""]),
-        "RelatedTableName": OOPAttributeString.descriptions(["en":""]),
-        "SysRelation": OOPAttributeString.descriptions(["en":""]),
-        "TableName": OOPAttributeString.descriptions(["en":""]),
-        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_ConfTableSelection_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "DefinitionGroupId": UUIDAttributeClass, // 
+        "DataSourceNumber": StringAttributeClass, // 
+        "RelatedTableName": StringAttributeClass, // 
+        "SysRelation": StringAttributeClass, // 
+        "TableName": StringAttributeClass, // 
+        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
+        "backingTable_ConfTableSelection_BRRelationshipId": UUIDAttributeClass, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_configuratordefinitiongrouptables");
   }

@@ -11,15 +11,15 @@ class DADMPolicyInternalOrganizationAssignment : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "ValidFrom": OOPAttributeString.descriptions(["en":""]),
-        "ValidTo": OOPAttributeString.descriptions(["en":""]),
-        "PolicyName": OOPAttributeString.descriptions(["en":""]),
-        "PolicyType": OOPAttributeString.descriptions(["en":""]),
-        "OrganizationHierarchyName": OOPAttributeString.descriptions(["en":""]),
-        "LegalEntityId": OOPAttributeUUID.descriptions(["en":""]),
-        "OperatingUnitNumber": OOPAttributeString.descriptions(["en":""]),
-        "BackingTable_SysPolicyOrganizationRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "ValidFrom": StringAttributeClass, // 
+        "ValidTo": StringAttributeClass, // 
+        "PolicyName": StringAttributeClass, // 
+        "PolicyType": StringAttributeClass, // 
+        "OrganizationHierarchyName": StringAttributeClass, // 
+        "LegalEntityId": UUIDAttributeClass, // 
+        "OperatingUnitNumber": StringAttributeClass, // 
+        "BackingTable_SysPolicyOrganizationRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_policyinternalorganizationassignment");
   }

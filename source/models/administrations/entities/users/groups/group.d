@@ -11,14 +11,14 @@ class DADMGroup : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "userId": OOPAttributeUUID.descriptions(["en":""]),
-        "objectId": OOPAttributeUUID.descriptions(["en":""]),
-        "enabled": OOPAttributeString.descriptions(["en":""]),
-        "company": OOPAttributeString.descriptions(["en":""]),
-        "language": OOPAttributeString.descriptions(["en":""]),
-        "preferredTimeZone": OOPAttributeString.descriptions(["en":""]),
-        "preferredCalendar": OOPAttributeString.descriptions(["en":""]),
+      .addValues([
+        "userId": UUIDAttributeClass, // 
+        "objectId": UUIDAttributeClass, // 
+        "enabled": StringAttributeClass, // 
+        "company": StringAttributeClass, // 
+        "language": StringAttributeClass, // 
+        "preferredTimeZone": StringAttributeClass, // 
+        "preferredCalendar": StringAttributeClass, // 
       ])
       .registerPath("admin_groups");
   }

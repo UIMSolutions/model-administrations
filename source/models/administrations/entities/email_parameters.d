@@ -11,16 +11,16 @@ class DADMEmailParameters : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "MaximumEmailAttachmentSize": OOPAttributeString.descriptions(["en":""]),
-        "SMTPUseNTLM": OOPAttributeString.descriptions(["en":""]),
-        "SMTPPortNumber": OOPAttributeString.descriptions(["en":""]),
-        "SMTPRelayServerName": OOPAttributeString.descriptions(["en":""]),
-        "SMTPUserName": OOPAttributeString.descriptions(["en":""]),
-        "SMTPRequireSSL": OOPAttributeString.descriptions(["en":""]),
-        "MailerNonInteractive": OOPAttributeString.descriptions(["en":""]),
-        "MailerInteractiveEnabled": OOPAttributeString.descriptions(["en":""]),
-        "BackingTable_SysEmailParametersRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "MaximumEmailAttachmentSize": StringAttributeClass, // 
+        "SMTPUseNTLM": StringAttributeClass, // 
+        "SMTPPortNumber": StringAttributeClass, // 
+        "SMTPRelayServerName": StringAttributeClass, // 
+        "SMTPUserName": StringAttributeClass, // 
+        "SMTPRequireSSL": StringAttributeClass, // 
+        "MailerNonInteractive": StringAttributeClass, // 
+        "MailerInteractiveEnabled": StringAttributeClass, // 
+        "BackingTable_SysEmailParametersRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_emailparameters");
   }

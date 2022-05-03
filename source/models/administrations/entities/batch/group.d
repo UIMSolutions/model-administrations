@@ -10,9 +10,9 @@ class DADMBatchGroup : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([  
-        "serverId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_BatchGroupRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([  
+        "serverId": UUIDAttributeClass, // 
+        "backingTable_BatchGroupRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_batchgroups");
   }

@@ -11,51 +11,51 @@ class DADMUser : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "DefaultCountryRegion": OOPAttributeString.descriptions(["en":""]),
-        "DocumentHandlingActive": OOPAttributeString.descriptions(["en":""]),
-        "ShowAttachmentStatus": OOPAttributeString.descriptions(["en":""]),
-        "Email": OOPAttributeString.descriptions(["en":""]),
-        "SendAlertAsEmailMessage": OOPAttributeString.descriptions(["en":""]),
-        "EventPollFrequency": OOPAttributeString.descriptions(["en":""]),
-        "EventPopUpDisplayWhen": OOPAttributeString.descriptions(["en":""]),
-        "EventPopUpLinkDestination": OOPAttributeString.descriptions(["en":""]),
-        "EventPopUps": OOPAttributeString.descriptions(["en":""]),
-        "EventWorkflowShowPopup": OOPAttributeString.descriptions(["en":""]),
-        "ShowNotificationsInTheMicrosoftDynamicsAX7Client": OOPAttributeString.descriptions(["en":""]),
-        "SendNotificationsInEmail": OOPAttributeString.descriptions(["en":""]),
-        "MarkEmptyLinks": OOPAttributeString.descriptions(["en":""]),
-        "UserID": OOPAttributeString.descriptions(["en":""]),
-        "Language": OOPAttributeString.descriptions(["en":""]),
-        "SqmEnabled": OOPAttributeString.descriptions(["en":""]),
-        "SqmGUID": OOPAttributeString.descriptions(["en":""]),
-        "WorkflowLineItemNotificationFormat": OOPAttributeString.descriptions(["en":""]),
-        "Density": OOPAttributeString.descriptions(["en":""]),
-        "Theme": OOPAttributeString.descriptions(["en":""]),
-        "StartPage": OOPAttributeString.descriptions(["en":""]),
-        "EmailProviderID": OOPAttributeString.descriptions(["en":""]),
-        "UserName": OOPAttributeString.descriptions(["en":""]),
-        "Enabled": OOPAttributeString.descriptions(["en":""]),
-        "Company": OOPAttributeString.descriptions(["en":""]),
-        "AutoLogOff": OOPAttributeString.descriptions(["en":""]),
-        "SecurityIdentifier": OOPAttributeString.descriptions(["en":""]),
-        "NetworkDomain": OOPAttributeString.descriptions(["en":""]),
-        "Alias": OOPAttributeString.descriptions(["en":""]),
-        "ExternalUser": OOPAttributeString.descriptions(["en":""]),
-        "UserInfo_language": OOPAttributeString.descriptions(["en":""]),
-        "Helplanguage": OOPAttributeString.descriptions(["en":""]),
-        "PreferredTimeZone": OOPAttributeString.descriptions(["en":""]),
-        "PreferredCalendar": OOPAttributeString.descriptions(["en":""]),
-        "HomePageRefreshDuration": OOPAttributeString.descriptions(["en":""]),
-        "GlobalListPageLinkMode": OOPAttributeString.descriptions(["en":""]),
-        "GlobalExcelExportMode": OOPAttributeString.descriptions(["en":""]),
-        "UserInfo_defaultPartition": OOPAttributeString.descriptions(["en":""]),
-        "GlobalExcelExportFilePath": OOPAttributeString.descriptions(["en":""]),
-        "PreferredLocale": OOPAttributeString.descriptions(["en":""]),
-        "AccountType": OOPAttributeString.descriptions(["en":""]),
-        "PersonName": OOPAttributeString.descriptions(["en":""]),
-        "AutomaticUrlUpdate": OOPAttributeString.descriptions(["en":""]),
-        "UserObjectId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "DefaultCountryRegion": StringAttributeClass, // 
+        "DocumentHandlingActive": StringAttributeClass, // 
+        "ShowAttachmentStatus": StringAttributeClass, // 
+        "Email": StringAttributeClass, // 
+        "SendAlertAsEmailMessage": StringAttributeClass, // 
+        "EventPollFrequency": StringAttributeClass, // 
+        "EventPopUpDisplayWhen": StringAttributeClass, // 
+        "EventPopUpLinkDestination": StringAttributeClass, // 
+        "EventPopUps": StringAttributeClass, // 
+        "EventWorkflowShowPopup": StringAttributeClass, // 
+        "ShowNotificationsInTheMicrosoftDynamicsAX7Client": StringAttributeClass, // 
+        "SendNotificationsInEmail": StringAttributeClass, // 
+        "MarkEmptyLinks": StringAttributeClass, // 
+        "UserID": StringAttributeClass, // 
+        "Language": StringAttributeClass, // 
+        "SqmEnabled": StringAttributeClass, // 
+        "SqmGUID": StringAttributeClass, // 
+        "WorkflowLineItemNotificationFormat": StringAttributeClass, // 
+        "Density": StringAttributeClass, // 
+        "Theme": StringAttributeClass, // 
+        "StartPage": StringAttributeClass, // 
+        "EmailProviderID": StringAttributeClass, // 
+        "UserName": StringAttributeClass, // 
+        "Enabled": StringAttributeClass, // 
+        "Company": StringAttributeClass, // 
+        "AutoLogOff": StringAttributeClass, // 
+        "SecurityIdentifier": StringAttributeClass, // 
+        "NetworkDomain": StringAttributeClass, // 
+        "Alias": StringAttributeClass, // 
+        "ExternalUser": StringAttributeClass, // 
+        "UserInfo_language": StringAttributeClass, // 
+        "Helplanguage": StringAttributeClass, // 
+        "PreferredTimeZone": StringAttributeClass, // 
+        "PreferredCalendar": StringAttributeClass, // 
+        "HomePageRefreshDuration": StringAttributeClass, // 
+        "GlobalListPageLinkMode": StringAttributeClass, // 
+        "GlobalExcelExportMode": StringAttributeClass, // 
+        "UserInfo_defaultPartition": StringAttributeClass, // 
+        "GlobalExcelExportFilePath": StringAttributeClass, // 
+        "PreferredLocale": StringAttributeClass, // 
+        "AccountType": StringAttributeClass, // 
+        "PersonName": StringAttributeClass, // 
+        "AutomaticUrlUpdate": StringAttributeClass, // 
+        "UserObjectId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_users");
   }

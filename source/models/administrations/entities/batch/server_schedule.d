@@ -10,12 +10,12 @@ class DADMBatchServerSchedule : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "EndTime": OOPAttributeString.descriptions(["en":""]),
-        "MaximumBatchThreads": OOPAttributeString.descriptions(["en":""]),
-        "AOSInstanceName": OOPAttributeString.descriptions(["en":""]),
-        "StartTime": OOPAttributeString.descriptions(["en":""]),
-        "backingTable_BatchServerConfigRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "EndTime": StringAttributeClass, // 
+        "MaximumBatchThreads": StringAttributeClass, // 
+        "AOSInstanceName": StringAttributeClass, // 
+        "StartTime": StringAttributeClass, // 
+        "backingTable_BatchServerConfigRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_batchserverschedules");
   }

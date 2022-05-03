@@ -10,12 +10,12 @@ class DADMCaseDependency : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "Case": OOPAttributeString.descriptions(["en":""]),
-        "ParentCase": OOPAttributeString.descriptions(["en":""]),
-        "CaseId": OOPAttributeUUID.descriptions(["en":""]),
-        "ParentCaseId": OOPAttributeUUID.descriptions(["en":""]),
-        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "Case": StringAttributeClass, // 
+        "ParentCase": StringAttributeClass, // 
+        "CaseId": UUIDAttributeClass, // 
+        "ParentCaseId": UUIDAttributeClass, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_casedependencies");
   }

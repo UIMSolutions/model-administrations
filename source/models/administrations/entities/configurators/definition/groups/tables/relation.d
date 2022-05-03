@@ -10,17 +10,17 @@ class DADMConfiguratorDefinitionGroupTableRelation : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "DefinitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "FixedValue": OOPAttributeString.descriptions(["en":""]),
-        "RelatedField": OOPAttributeString.descriptions(["en":""]),
-        "RelatedTable": OOPAttributeString.descriptions(["en":""]),
-        "RelationshipType": OOPAttributeString.descriptions(["en":""]),
-        "SourceFieldName": OOPAttributeString.descriptions(["en":""]),
-        "SourceTableName": OOPAttributeString.descriptions(["en":""]),
-        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_ConfRelations_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "DefinitionGroupId": UUIDAttributeClass, // 
+        "FixedValue": StringAttributeClass, // 
+        "RelatedField": StringAttributeClass, // 
+        "RelatedTable": StringAttributeClass, // 
+        "RelationshipType": StringAttributeClass, // 
+        "SourceFieldName": StringAttributeClass, // 
+        "SourceTableName": StringAttributeClass, // 
+        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
+        "backingTable_ConfRelations_BRRelationshipId": UUIDAttributeClass, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_configuratordefinitiongrouptablerelation");
   }

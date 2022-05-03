@@ -10,16 +10,16 @@ class DADMCaseAssociation : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "AssociationCompany": OOPAttributeString.descriptions(["en":""]),
-        "AssociationId": OOPAttributeUUID.descriptions(["en":""]),
-        "CaseId": OOPAttributeUUID.descriptions(["en":""]),
-        "CaseRecId": OOPAttributeUUID.descriptions(["en":""]),
-        "EntityType": OOPAttributeString.descriptions(["en":""]),
-        "isPrimary": OOPAttributeString.descriptions(["en":""]),
-        "Reference": OOPAttributeString.descriptions(["en":""]),
-        "Relationship_CaseDetailEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "Relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "AssociationCompany": StringAttributeClass, // 
+        "AssociationId": UUIDAttributeClass, // 
+        "CaseId": UUIDAttributeClass, // 
+        "CaseRecId": UUIDAttributeClass, // 
+        "EntityType": StringAttributeClass, // 
+        "isPrimary": StringAttributeClass, // 
+        "Reference": StringAttributeClass, // 
+        "Relationship_CaseDetailEntityRelationshipId": UUIDAttributeClass, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_caseassociationS");
   }

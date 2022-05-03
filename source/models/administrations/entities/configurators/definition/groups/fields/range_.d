@@ -10,14 +10,14 @@ class DADMConfiguratorDefinitionGroupFieldRange : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "fieldName": OOPAttributeString.descriptions(["en":""]),
-        "range": OOPAttributeString.descriptions(["en":""]),
-        "tableName": OOPAttributeString.descriptions(["en":""]),
-        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_ConfRange_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "definitionGroupId": UUIDAttributeClass, // 
+        "fieldName": StringAttributeClass, // 
+        "range": StringAttributeClass, // 
+        "tableName": StringAttributeClass, // 
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
+        "backingTable_ConfRange_BRRelationshipId": UUIDAttributeClass, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_configuratorDefinitiongroupfieldranges");
   }

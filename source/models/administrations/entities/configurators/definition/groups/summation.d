@@ -10,19 +10,19 @@ class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "average": OOPAttributeString.descriptions(["en":""]),
-        "averageSelected": OOPAttributeString.descriptions(["en":""]),
-        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "countAll": OOPAttributeString.descriptions(["en":""]),
-        "countSelected": OOPAttributeString.descriptions(["en":""]),
-        "fieldName": OOPAttributeString.descriptions(["en":""]),
-        "sumAll": OOPAttributeString.descriptions(["en":""]),
-        "sumSelected": OOPAttributeString.descriptions(["en":""]),
-        "tableName": OOPAttributeString.descriptions(["en":""]),
-        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_ConfSummation_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "average": StringAttributeClass, // 
+        "averageSelected": StringAttributeClass, // 
+        "definitionGroupId": UUIDAttributeClass, // 
+        "countAll": StringAttributeClass, // 
+        "countSelected": StringAttributeClass, // 
+        "fieldName": StringAttributeClass, // 
+        "sumAll": StringAttributeClass, // 
+        "sumSelected": StringAttributeClass, // 
+        "tableName": StringAttributeClass, // 
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
+        "backingTable_ConfSummation_BRRelationshipId": UUIDAttributeClass, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
        ])
       .registerPath("admin_configuratordefinitiongroupsummation");
   }

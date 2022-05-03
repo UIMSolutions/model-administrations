@@ -11,10 +11,10 @@ class DADMGlobalConfiguration : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "aosInstanceName": OOPAttributeString.descriptions(["en":""]),
-        "settingLevel": OOPAttributeString.descriptions(["en":""]),
-        "value": OOPAttributeString.descriptions(["en":""]),
+      .addValues([
+        "aosInstanceName": StringAttributeClass, // 
+        "settingLevel": StringAttributeClass, // 
+        "value": StringAttributeClass, // 
       ])
       .registerPath("admin_globalconfigurations");
   }

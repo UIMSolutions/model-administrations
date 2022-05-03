@@ -11,14 +11,14 @@ class DADMSecurityUserRole : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "AssignmentMode": OOPAttributeString.descriptions(["en":""]),
-        "AssignmentStatus": OOPAttributeString.descriptions(["en":""]),
-        "SecurityRole": OOPAttributeString.descriptions(["en":""]),
-        "UserId": OOPAttributeString.descriptions(["en":""]),
-        "SecurityRoleIdentifier": OOPAttributeString.descriptions(["en":""]),
-        "SecurityRoleName": OOPAttributeString.descriptions(["en":""]),
-        "UserLicenseType": OOPAttributeString.descriptions(["en":""]),
+      .addValues([
+        "AssignmentMode": StringAttributeClass, // 
+        "AssignmentStatus": StringAttributeClass, // 
+        "SecurityRole": StringAttributeClass, // 
+        "UserId": StringAttributeClass, // 
+        "SecurityRoleIdentifier": StringAttributeClass, // 
+        "SecurityRoleName": StringAttributeClass, // 
+        "UserLicenseType": StringAttributeClass, // 
       ])
       .registerPath("admin_securityuserroles");
   }

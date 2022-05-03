@@ -10,57 +10,57 @@ class DADMCaseDetailBase : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "answerId": OOPAttributeUUID.descriptions(["en":""]),
-        "billingProjectId": OOPAttributeUUID.descriptions(["en":""]),
-        "caseCategoryHierarchyDetail": OOPAttributeString.descriptions(["en":""]),
-        "caseId": OOPAttributeUUID.descriptions(["en":""]),
-        "caseStatus": OOPAttributeString.descriptions(["en":""]),
-        "categoryId": OOPAttributeUUID.descriptions(["en":""]),
-        "categoryType": OOPAttributeString.descriptions(["en":""]),
-        "closedBy":OOPAttributeUserId.descriptions(["en":""]),
-        "closedDateAndTime": OOPAttributeString.descriptions(["en":""]),
-        "compliance": OOPAttributeString.descriptions(["en":""]),
-        "caseCreatedDateAndTime": OOPAttributeString.descriptions(["en":""]),
-        "contactId": OOPAttributeUUID.descriptions(["en":""]),
-        "department": OOPAttributeString.descriptions(["en":""]),
-        "dirParty": OOPAttributeString.descriptions(["en":""]),
-        "employeeResponsibleName": OOPAttributeString.descriptions(["en":""]),
-        "employeeResponsiblePersonnelNumber": OOPAttributeString.descriptions(["en":""]),
-        "fmlAApproved": OOPAttributeString.descriptions(["en":""]),
-        "fmlAApprovedBy":OOPAttributeUserId.descriptions(["en":""]),
-        "fmlAApprovedHours": OOPAttributeString.descriptions(["en":""]),
-        "fmlAEstimatedLeaveEndDate": OOPAttributeString.descriptions(["en":""]),
-        "fmlAHoursWorked": OOPAttributeString.descriptions(["en":""]),
-        "fmlALeaveReason": OOPAttributeString.descriptions(["en":""]),
-        "fmlALeaveRequestDate": OOPAttributeString.descriptions(["en":""]),
-        "fmlALeaveSchedule": OOPAttributeString.descriptions(["en":""]),
-        "fmlALeaveStartDate": OOPAttributeString.descriptions(["en":""]),
-        "fmlALengthOfEmployment": OOPAttributeString.descriptions(["en":""]),
-        "fmlAMaintainHoursManually": OOPAttributeString.descriptions(["en":""]),
-        "fmlAMilitaryHoursAvailable": OOPAttributeString.descriptions(["en":""]),
-        "fmlAStandardHoursAvailable": OOPAttributeString.descriptions(["en":""]),
-        "hcmWorker": OOPAttributeString.descriptions(["en":""]),
-        "instanceRelationType": OOPAttributeString.descriptions(["en":""]),
-        "notes": OOPAttributeString.descriptions(["en":""]),
-        "departmentNumber": OOPAttributeString.descriptions(["en":""]),
-        "partyNumber": OOPAttributeString.descriptions(["en":""]),
-        "plannedEffectiveDate": OOPAttributeString.descriptions(["en":""]),
-        "priority": OOPAttributeString.descriptions(["en":""]),
-        "processId": OOPAttributeUUID.descriptions(["en":""]),
-        "questionnaireId": OOPAttributeUUID.descriptions(["en":""]),
-        "resolution": OOPAttributeString.descriptions(["en":""]),
-        "serviceStageId": OOPAttributeUUID.descriptions(["en":""]),
-        "serviceLevelAgreementId": OOPAttributeUUID.descriptions(["en":""]),
-        "serviceLevelAgreementStatus": OOPAttributeString.descriptions(["en":""]),
-        "serviceLevelCompletionDate": OOPAttributeString.descriptions(["en":""]),
-        "emailId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_DirPartyBaseEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_ProjectEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_smmContactPersonEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_OMOperatingUnitEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_HcmWorkerEntityRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "answerId": UUIDAttributeClass, // 
+        "billingProjectId": UUIDAttributeClass, // 
+        "caseCategoryHierarchyDetail": StringAttributeClass, // 
+        "caseId": UUIDAttributeClass, // 
+        "caseStatus": StringAttributeClass, // 
+        "categoryId": UUIDAttributeClass, // 
+        "categoryType": StringAttributeClass, // 
+        "closedBy":UserIdAttributeClass, // 
+        "closedDateAndTime": StringAttributeClass, // 
+        "compliance": StringAttributeClass, // 
+        "caseCreatedDateAndTime": StringAttributeClass, // 
+        "contactId": UUIDAttributeClass, // 
+        "department": StringAttributeClass, // 
+        "dirParty": StringAttributeClass, // 
+        "employeeResponsibleName": StringAttributeClass, // 
+        "employeeResponsiblePersonnelNumber": StringAttributeClass, // 
+        "fmlAApproved": StringAttributeClass, // 
+        "fmlAApprovedBy":UserIdAttributeClass, // 
+        "fmlAApprovedHours": StringAttributeClass, // 
+        "fmlAEstimatedLeaveEndDate": StringAttributeClass, // 
+        "fmlAHoursWorked": StringAttributeClass, // 
+        "fmlALeaveReason": StringAttributeClass, // 
+        "fmlALeaveRequestDate": StringAttributeClass, // 
+        "fmlALeaveSchedule": StringAttributeClass, // 
+        "fmlALeaveStartDate": StringAttributeClass, // 
+        "fmlALengthOfEmployment": StringAttributeClass, // 
+        "fmlAMaintainHoursManually": StringAttributeClass, // 
+        "fmlAMilitaryHoursAvailable": StringAttributeClass, // 
+        "fmlAStandardHoursAvailable": StringAttributeClass, // 
+        "hcmWorker": StringAttributeClass, // 
+        "instanceRelationType": StringAttributeClass, // 
+        "notes": StringAttributeClass, // 
+        "departmentNumber": StringAttributeClass, // 
+        "partyNumber": StringAttributeClass, // 
+        "plannedEffectiveDate": StringAttributeClass, // 
+        "priority": StringAttributeClass, // 
+        "processId": UUIDAttributeClass, // 
+        "questionnaireId": UUIDAttributeClass, // 
+        "resolution": StringAttributeClass, // 
+        "serviceStageId": UUIDAttributeClass, // 
+        "serviceLevelAgreementId": UUIDAttributeClass, // 
+        "serviceLevelAgreementStatus": StringAttributeClass, // 
+        "serviceLevelCompletionDate": StringAttributeClass, // 
+        "emailId": UUIDAttributeClass, // 
+        "relationship_DirPartyBaseEntityRelationshipId": UUIDAttributeClass, // 
+        "relationship_ProjectEntityRelationshipId": UUIDAttributeClass, // 
+        "relationship_smmContactPersonEntityRelationshipId": UUIDAttributeClass, // 
+        "relationship_OMOperatingUnitEntityRelationshipId": UUIDAttributeClass, // 
+        "relationship_HcmWorkerEntityRelationshipId": UUIDAttributeClass, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_casedetailbases");
   }

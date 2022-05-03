@@ -10,12 +10,12 @@ class DADMConfiguratorDefinitionGroup : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "definitionGroupId": OOPAttributeUUID.descriptions(["en":""]),
-        "isQueryBased": OOPAttributeString.descriptions(["en":""]),
-        "queryTitle": OOPAttributeString.descriptions(["en":""]),
-        "backingTable_ConfTable_BRRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "relationship_PrimaryCompanyContextRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "definitionGroupId": UUIDAttributeClass, // 
+        "isQueryBased": StringAttributeClass, // 
+        "queryTitle": StringAttributeClass, // 
+        "backingTable_ConfTable_BRRelationshipId": UUIDAttributeClass, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_configuratordefinitiongroups");
   }

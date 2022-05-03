@@ -11,17 +11,17 @@ class DADMParameters : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "MaximumRowsOfSSRSReports": OOPAttributeString.descriptions(["en":""]),
-        "SystemLanguage": OOPAttributeString.descriptions(["en":""]),
-        "Increment": OOPAttributeString.descriptions(["en":""]),
-        "ThaiSoftwareSequenceNumber": OOPAttributeString.descriptions(["en":""]),
-        "SystemCurrencyCode": OOPAttributeString.descriptions(["en":""]),
-        "SystemExchangeRateType": OOPAttributeString.descriptions(["en":""]),
-        "SystemExchangeRateTypeId": OOPAttributeUUID.descriptions(["en":""]),
-        "Relationship_CurrencyCodeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "Relationship_ExchangeRateRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
-        "backingTable_SystemParametersRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "MaximumRowsOfSSRSReports": StringAttributeClass, // 
+        "SystemLanguage": StringAttributeClass, // 
+        "Increment": StringAttributeClass, // 
+        "ThaiSoftwareSequenceNumber": StringAttributeClass, // 
+        "SystemCurrencyCode": StringAttributeClass, // 
+        "SystemExchangeRateType": StringAttributeClass, // 
+        "SystemExchangeRateTypeId": UUIDAttributeClass, // 
+        "Relationship_CurrencyCodeRelationshipId": UUIDAttributeClass, // 
+        "Relationship_ExchangeRateRelationshipId": UUIDAttributeClass, // 
+        "backingTable_SystemParametersRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_parameters");
   }

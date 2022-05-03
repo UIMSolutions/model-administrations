@@ -11,18 +11,18 @@ class DADMPolicyOrganization : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "hierarchyType": OOPAttributeString.descriptions(["en":""]),
-        "hierarchyName": OOPAttributeString.descriptions(["en":""]),
-        "organization": OOPAttributeString.descriptions(["en":""]),
-        "partyNumber": OOPAttributeString.descriptions(["en":""]),
-        "policy": OOPAttributeString.descriptions(["en":""]),
-        "policyName": OOPAttributeString.descriptions(["en":""]),
-        "policyTypeRel": OOPAttributeString.descriptions(["en":""]),
-        "policyType": OOPAttributeString.descriptions(["en":""]),
-        "validFrom": OOPAttributeString.descriptions(["en":""]),
-        "validTo": OOPAttributeString.descriptions(["en":""]),
-        "backingTable_SysPolicyOrganizationRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "hierarchyType": StringAttributeClass, // 
+        "hierarchyName": StringAttributeClass, // 
+        "organization": StringAttributeClass, // 
+        "partyNumber": StringAttributeClass, // 
+        "policy": StringAttributeClass, // 
+        "policyName": StringAttributeClass, // 
+        "policyTypeRel": StringAttributeClass, // 
+        "policyType": StringAttributeClass, // 
+        "validFrom": StringAttributeClass, // 
+        "validTo": StringAttributeClass, // 
+        "backingTable_SysPolicyOrganizationRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_policyorganizations");
   }

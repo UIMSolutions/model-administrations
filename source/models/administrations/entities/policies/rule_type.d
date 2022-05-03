@@ -11,14 +11,14 @@ class DADMPolicyRuleType : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "includeParentRule": OOPAttributeString.descriptions(["en":""]),
-        "isPrecedenceSupported": OOPAttributeString.descriptions(["en":""]),
-        "ruleName": OOPAttributeString.descriptions(["en":""]),
-        "policyTypeRel": OOPAttributeString.descriptions(["en":""]),
-        "policyType": OOPAttributeString.descriptions(["en":""]),
-        "policyName": OOPAttributeString.descriptions(["en":""]),
-        "backingTable_SysPolicyRuleTypeRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "includeParentRule": StringAttributeClass, // 
+        "isPrecedenceSupported": StringAttributeClass, // 
+        "ruleName": StringAttributeClass, // 
+        "policyTypeRel": StringAttributeClass, // 
+        "policyType": StringAttributeClass, // 
+        "policyName": StringAttributeClass, // 
+        "backingTable_SysPolicyRuleTypeRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_policyruletypes");
   }

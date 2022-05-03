@@ -11,13 +11,13 @@ class DADMSecurityUserRoleAssociation : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "AssignmentMode": OOPAttributeString.descriptions(["en":""]),
-        "AssignmentStatus": OOPAttributeString.descriptions(["en":""]),
-        "SecurityRole": OOPAttributeString.descriptions(["en":""]),
-        "UserId": OOPAttributeString.descriptions(["en":""]),
-        "SecurityRoleId": OOPAttributeString.descriptions(["en":""]),
-        "SecurityRoleName": OOPAttributeString.descriptions(["en":""]),
+      .addValues([
+        "AssignmentMode": StringAttributeClass, // 
+        "AssignmentStatus": StringAttributeClass, // 
+        "SecurityRole": StringAttributeClass, // 
+        "UserId": StringAttributeClass, // 
+        "SecurityRoleId": StringAttributeClass, // 
+        "SecurityRoleName": StringAttributeClass, // 
       ])
       .registerPath("admin_securityuserroleassociation");
   }

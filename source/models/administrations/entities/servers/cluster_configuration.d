@@ -11,8 +11,8 @@ class DADMServerClusterConfiguration : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "backingTable_SysClusterConfigRelationshipId": OOPAttributeUUID.descriptions(["en":""]),
+      .addValues([
+        "backingTable_SysClusterConfigRelationshipId": UUIDAttributeClass, // 
       ])
       .registerPath("admin_serverclusterconfigurations");
   }
