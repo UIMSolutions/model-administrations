@@ -29,8 +29,9 @@ class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSummation"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMConfiguratorDefinitionGroupSummation);
 
   auto entity = ADMConfiguratorDefinitionGroupSummation;

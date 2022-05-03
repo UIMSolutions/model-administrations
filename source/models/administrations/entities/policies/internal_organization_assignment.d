@@ -26,8 +26,9 @@ class DADMPolicyInternalOrganizationAssignment : DOOPEntity {
 }
 mixin(EntityCalls!("ADMPolicyInternalOrganizationAssignment"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMPolicyInternalOrganizationAssignment);
   
   auto entity = ADMPolicyInternalOrganizationAssignment;

@@ -29,8 +29,9 @@ class DADMServerConfiguration : DOOPEntity {
 }
 mixin(EntityCalls!("ADMServerConfiguration"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMServerConfiguration);
   
   auto entity = ADMServerConfiguration;

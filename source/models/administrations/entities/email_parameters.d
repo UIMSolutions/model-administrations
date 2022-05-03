@@ -27,8 +27,9 @@ class DADMEmailParameters : DOOPEntity {
 }
 mixin(EntityCalls!("ADMEmailParameters"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMEmailParameters);
   
   auto entity = ADMEmailParameters;

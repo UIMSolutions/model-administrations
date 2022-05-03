@@ -23,8 +23,9 @@ class DADMSecurityRole : DOOPEntity {
 }
 mixin(EntityCalls!("ADMSecurityRole"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMSecurityRole);
   
   auto entity = ADMSecurityRole;

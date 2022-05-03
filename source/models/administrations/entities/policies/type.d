@@ -25,8 +25,9 @@ class DADMPolicyType : DOOPEntity {
 }
 mixin(EntityCalls!("ADMPolicyType"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMPolicyType);
   
   auto entity = ADMPolicyType;

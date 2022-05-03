@@ -19,8 +19,9 @@ class DADMBatchGroup : DOOPEntity {
 }
 mixin(EntityCalls!("ADMBatchGroup"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMBatchGroup);
 
   auto entity = ADMBatchGroup;

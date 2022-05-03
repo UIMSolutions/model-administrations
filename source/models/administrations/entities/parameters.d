@@ -28,8 +28,9 @@ class DADMParameters : DOOPEntity {
 }
 mixin(EntityCalls!("ADMParameters"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMParameters);
   
   auto entity = ADMParameters;

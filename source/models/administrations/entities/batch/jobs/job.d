@@ -34,8 +34,9 @@ class DADMBatchJob : DOOPEntity {
 }
 mixin(EntityCalls!("ADMBatchJob"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMBatchJob);
 
   auto entity = ADMBatchJob;

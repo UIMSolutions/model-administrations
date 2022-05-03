@@ -26,8 +26,9 @@ class DADMCaseAssociation : DOOPEntity {
 }
 mixin(EntityCalls!("ADMCaseAssociation"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMCaseAssociation);
 
   auto entity = ADMCaseAssociation;

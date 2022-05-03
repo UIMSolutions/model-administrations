@@ -19,8 +19,9 @@ class DADMUserGroup : DOOPEntity {
 }
 mixin(EntityCalls!("ADMUserGroup"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMUserGroup);
   
   auto entity = ADMUserGroup;

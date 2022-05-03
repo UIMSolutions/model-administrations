@@ -22,8 +22,9 @@ class DADMBatchServerSchedule : DOOPEntity {
 }
 mixin(EntityCalls!("ADMBatchServerSchedule"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ADMBatchServerSchedule);
 
   auto entity = ADMBatchServerSchedule;
