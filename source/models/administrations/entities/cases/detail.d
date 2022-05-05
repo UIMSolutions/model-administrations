@@ -11,6 +11,9 @@ class DADMCaseDetailBase : DOOPEntity {
 
     this
       .addValues([
+        ContactIdAttributeClass, // 
+      ])
+      .addValues([
         "answerId": UUIDAttributeClass, // 
         "billingProjectId": UUIDAttributeClass, // 
         "caseCategoryHierarchyDetail": StringAttributeClass, // 
@@ -22,7 +25,6 @@ class DADMCaseDetailBase : DOOPEntity {
         "closedDateAndTime": StringAttributeClass, // 
         "compliance": StringAttributeClass, // 
         "caseCreatedDateAndTime": StringAttributeClass, // 
-        "contactId": UUIDAttributeClass, // 
         "department": StringAttributeClass, // 
         "dirParty": StringAttributeClass, // 
         "employeeResponsibleName": StringAttributeClass, // 
