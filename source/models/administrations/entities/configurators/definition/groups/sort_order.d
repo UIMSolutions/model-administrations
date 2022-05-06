@@ -11,14 +11,14 @@ class DADMConfiguratorDefinitionGroupSortOrder : DOOPEntity {
 
     this
       .addValues([
-        "definitionGroupId": UUIDAttributeClass, // 
-        "fieldName": StringAttributeClass, // 
-        "sortingNumber": StringAttributeClass, // 
-        "sortOrder": StringAttributeClass, // 
-        "tableName": StringAttributeClass, // 
-        "relationship_ConfiguratorDefinitionGroupSortOrderEntityRelationshipId": UUIDAttributeClass, // 
-        "backingTable_ConfSortOrder_BRRelationshipId": UUIDAttributeClass, // 
-        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "definitionGroupId": UUIDAttribute, // 
+        "fieldName": StringAttribute, // 
+        "sortingNumber": StringAttribute, // 
+        "sortOrder": StringAttribute, // 
+        "tableName": StringAttribute, // 
+        "relationship_ConfiguratorDefinitionGroupSortOrderEntityRelationshipId": UUIDAttribute, // 
+        "backingTable_ConfSortOrder_BRRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_configuratordefinitiongroupsortorders");
   }

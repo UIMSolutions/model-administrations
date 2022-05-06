@@ -12,16 +12,16 @@ class DADMParameters : DOOPEntity {
 
     this
       .addValues([
-        "MaximumRowsOfSSRSReports": StringAttributeClass, // 
-        "SystemLanguage": StringAttributeClass, // 
-        "Increment": StringAttributeClass, // 
-        "ThaiSoftwareSequenceNumber": StringAttributeClass, // 
-        "SystemCurrencyCode": StringAttributeClass, // 
-        "SystemExchangeRateType": StringAttributeClass, // 
-        "SystemExchangeRateTypeId": UUIDAttributeClass, // 
-        "Relationship_CurrencyCodeRelationshipId": UUIDAttributeClass, // 
-        "Relationship_ExchangeRateRelationshipId": UUIDAttributeClass, // 
-        "backingTable_SystemParametersRelationshipId": UUIDAttributeClass, // 
+        "MaximumRowsOfSSRSReports": StringAttribute, // 
+        "SystemLanguage": StringAttribute, // 
+        "Increment": StringAttribute, // 
+        "ThaiSoftwareSequenceNumber": StringAttribute, // 
+        "SystemCurrencyCode": StringAttribute, // 
+        "SystemExchangeRateType": StringAttribute, // 
+        "SystemExchangeRateTypeId": UUIDAttribute, // 
+        "Relationship_CurrencyCodeRelationshipId": UUIDAttribute, // 
+        "Relationship_ExchangeRateRelationshipId": UUIDAttribute, // 
+        "backingTable_SystemParametersRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_parameters");
   }

@@ -12,7 +12,7 @@ class DADMUserGroup : DOOPEntity {
 
     this
       .addValues([
-        "backingTable_UserGroupInfoRelationshipId": UUIDAttributeClass, // 
+        "backingTable_UserGroupInfoRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_usergroups");
   }

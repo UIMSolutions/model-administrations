@@ -12,15 +12,15 @@ class DADMEmailParameters : DOOPEntity {
 
     this
       .addValues([
-        "MaximumEmailAttachmentSize": StringAttributeClass, // 
-        "SMTPUseNTLM": StringAttributeClass, // 
-        "SMTPPortNumber": StringAttributeClass, // 
-        "SMTPRelayServerName": StringAttributeClass, // 
-        "SMTPUserName": StringAttributeClass, // 
-        "SMTPRequireSSL": StringAttributeClass, // 
-        "MailerNonInteractive": StringAttributeClass, // 
-        "MailerInteractiveEnabled": StringAttributeClass, // 
-        "BackingTable_SysEmailParametersRelationshipId": UUIDAttributeClass, // 
+        "MaximumEmailAttachmentSize": StringAttribute, // 
+        "SMTPUseNTLM": StringAttribute, // 
+        "SMTPPortNumber": StringAttribute, // 
+        "SMTPRelayServerName": StringAttribute, // 
+        "SMTPUserName": StringAttribute, // 
+        "SMTPRequireSSL": StringAttribute, // 
+        "MailerNonInteractive": StringAttribute, // 
+        "MailerInteractiveEnabled": StringAttribute, // 
+        "BackingTable_SysEmailParametersRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_emailparameters");
   }

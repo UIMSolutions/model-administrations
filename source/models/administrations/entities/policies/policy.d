@@ -12,11 +12,11 @@ class DADMPolicy : DOOPEntity {
 
     this
       .addValues([
-        "IsPolicyActive": StringAttributeClass, // 
-        "PolicyName": StringAttributeClass, // 
-        "PolicyTypeRecId": UUIDAttributeClass, // 
-        "PolicyType": StringAttributeClass, // 
-        "BackingTable_SysPolicyRelationshipId": UUIDAttributeClass, // 
+        "IsPolicyActive": StringAttribute, // 
+        "PolicyName": StringAttribute, // 
+        "PolicyTypeRecId": UUIDAttribute, // 
+        "PolicyType": StringAttribute, // 
+        "BackingTable_SysPolicyRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_policies");
   }

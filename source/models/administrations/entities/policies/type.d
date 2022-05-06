@@ -12,13 +12,13 @@ class DADMPolicyType : DOOPEntity {
 
     this
       .addValues([
-        "policyName": StringAttributeClass, // 
-        "purpose": StringAttributeClass, // 
-        "dropDialog": StringAttributeClass, // 
-        "isPolicyReadOnly": StringAttributeClass, // 
-        "isReassignOrganizationSupported": StringAttributeClass, // 
-        "policyType": StringAttributeClass, // 
-        "backingTable_SysPolicyTypeRelationshipId": UUIDAttributeClass, // 
+        "policyName": StringAttribute, // 
+        "purpose": StringAttribute, // 
+        "dropDialog": StringAttribute, // 
+        "isPolicyReadOnly": StringAttribute, // 
+        "isReassignOrganizationSupported": StringAttribute, // 
+        "policyType": StringAttribute, // 
+        "backingTable_SysPolicyTypeRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_policytypes");
   }

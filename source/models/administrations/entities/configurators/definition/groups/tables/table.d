@@ -12,14 +12,14 @@ class DADMConfiguratorDefinitionGroupTable : DOOPEntity {
 
     this
       .addValues([
-        "DefinitionGroupId": UUIDAttributeClass, // 
-        "DataSourceNumber": StringAttributeClass, // 
-        "RelatedTableName": StringAttributeClass, // 
-        "SysRelation": StringAttributeClass, // 
-        "TableName": StringAttributeClass, // 
-        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
-        "backingTable_ConfTableSelection_BRRelationshipId": UUIDAttributeClass, // 
-        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "DefinitionGroupId": UUIDAttribute, // 
+        "DataSourceNumber": StringAttribute, // 
+        "RelatedTableName": StringAttribute, // 
+        "SysRelation": StringAttribute, // 
+        "TableName": StringAttribute, // 
+        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttribute, // 
+        "backingTable_ConfTableSelection_BRRelationshipId": UUIDAttribute, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_configuratordefinitiongrouptables");
   }

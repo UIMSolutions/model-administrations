@@ -12,13 +12,13 @@ class DADMGroup : DOOPEntity {
 
     this
       .addValues([
-        "userId": UUIDAttributeClass, // 
-        "objectId": UUIDAttributeClass, // 
-        "enabled": StringAttributeClass, // 
-        "company": StringAttributeClass, // 
-        "language": StringAttributeClass, // 
-        "preferredTimeZone": StringAttributeClass, // 
-        "preferredCalendar": StringAttributeClass, // 
+        "userId": UUIDAttribute, // 
+        "objectId": UUIDAttribute, // 
+        "enabled": StringAttribute, // 
+        "company": StringAttribute, // 
+        "language": StringAttribute, // 
+        "preferredTimeZone": StringAttribute, // 
+        "preferredCalendar": StringAttribute, // 
       ])
       .registerPath("admin_groups");
   }

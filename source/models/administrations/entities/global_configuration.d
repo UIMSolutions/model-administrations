@@ -12,9 +12,9 @@ class DADMGlobalConfiguration : DOOPEntity {
 
     this
       .addValues([
-        "aosInstanceName": StringAttributeClass, // 
-        "settingLevel": StringAttributeClass, // 
-        "value": StringAttributeClass, // 
+        "aosInstanceName": StringAttribute, // 
+        "settingLevel": StringAttribute, // 
+        "value": StringAttribute, // 
       ])
       .registerPath("admin_globalconfigurations");
   }

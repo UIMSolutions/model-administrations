@@ -12,17 +12,17 @@ class DADMPolicyOrganization : DOOPEntity {
 
     this
       .addValues([
-        "hierarchyType": StringAttributeClass, // 
-        "hierarchyName": StringAttributeClass, // 
-        "organization": StringAttributeClass, // 
-        "partyNumber": StringAttributeClass, // 
-        "policy": StringAttributeClass, // 
-        "policyName": StringAttributeClass, // 
-        "policyTypeRel": StringAttributeClass, // 
-        "policyType": StringAttributeClass, // 
-        "validFrom": StringAttributeClass, // 
-        "validTo": StringAttributeClass, // 
-        "backingTable_SysPolicyOrganizationRelationshipId": UUIDAttributeClass, // 
+        "hierarchyType": StringAttribute, // 
+        "hierarchyName": StringAttribute, // 
+        "organization": StringAttribute, // 
+        "partyNumber": StringAttribute, // 
+        "policy": StringAttribute, // 
+        "policyName": StringAttribute, // 
+        "policyTypeRel": StringAttribute, // 
+        "policyType": StringAttribute, // 
+        "validFrom": StringAttribute, // 
+        "validTo": StringAttribute, // 
+        "backingTable_SysPolicyOrganizationRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_policyorganizations");
   }

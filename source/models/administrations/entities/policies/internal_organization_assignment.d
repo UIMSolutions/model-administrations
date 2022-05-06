@@ -12,14 +12,14 @@ class DADMPolicyInternalOrganizationAssignment : DOOPEntity {
 
     this
       .addValues([
-        "ValidFrom": StringAttributeClass, // 
-        "ValidTo": StringAttributeClass, // 
-        "PolicyName": StringAttributeClass, // 
-        "PolicyType": StringAttributeClass, // 
-        "OrganizationHierarchyName": StringAttributeClass, // 
-        "LegalEntityId": UUIDAttributeClass, // 
-        "OperatingUnitNumber": StringAttributeClass, // 
-        "BackingTable_SysPolicyOrganizationRelationshipId": UUIDAttributeClass, // 
+        "ValidFrom": StringAttribute, // 
+        "ValidTo": StringAttribute, // 
+        "PolicyName": StringAttribute, // 
+        "PolicyType": StringAttribute, // 
+        "OrganizationHierarchyName": StringAttribute, // 
+        "LegalEntityId": UUIDAttribute, // 
+        "OperatingUnitNumber": StringAttribute, // 
+        "BackingTable_SysPolicyOrganizationRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_policyinternalorganizationassignment");
   }

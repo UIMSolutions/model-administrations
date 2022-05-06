@@ -11,18 +11,18 @@ class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
 
     this
       .addValues([
-        "average": StringAttributeClass, // 
-        "averageSelected": StringAttributeClass, // 
-        "definitionGroupId": UUIDAttributeClass, // 
-        "countAll": StringAttributeClass, // 
-        "countSelected": StringAttributeClass, // 
-        "fieldName": StringAttributeClass, // 
-        "sumAll": StringAttributeClass, // 
-        "sumSelected": StringAttributeClass, // 
-        "tableName": StringAttributeClass, // 
-        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
-        "backingTable_ConfSummation_BRRelationshipId": UUIDAttributeClass, // 
-        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "average": StringAttribute, // 
+        "averageSelected": StringAttribute, // 
+        "definitionGroupId": UUIDAttribute, // 
+        "countAll": StringAttribute, // 
+        "countSelected": StringAttribute, // 
+        "fieldName": StringAttribute, // 
+        "sumAll": StringAttribute, // 
+        "sumSelected": StringAttribute, // 
+        "tableName": StringAttribute, // 
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttribute, // 
+        "backingTable_ConfSummation_BRRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
        ])
       .registerPath("admin_configuratordefinitiongroupsummation");
   }

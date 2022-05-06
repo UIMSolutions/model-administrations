@@ -12,17 +12,17 @@ class DADMServerConfiguration : DOOPEntity {
 
     this
       .addValues([
-        "aosInstanceName": StringAttributeClass, // 
-        "azureDeploymentId": UUIDAttributeClass, // 
-        "referenceToAClusterName": StringAttributeClass, // 
-        "isBatchServer": StringAttributeClass, // 
-        "isRoleIdle": StringAttributeClass, // 
-        "loadBalancer": StringAttributeClass, // 
-        "maxConcurrentSessions": StringAttributeClass, // 
-        "serverGUID": StringAttributeClass, // 
-        "timeAlive": StringAttributeClass, // 
-        "clusterName": StringAttributeClass, // 
-        "backingTable_SysServerConfigRelationshipId": UUIDAttributeClass, // 
+        "aosInstanceName": StringAttribute, // 
+        "azureDeploymentId": UUIDAttribute, // 
+        "referenceToAClusterName": StringAttribute, // 
+        "isBatchServer": StringAttribute, // 
+        "isRoleIdle": StringAttribute, // 
+        "loadBalancer": StringAttribute, // 
+        "maxConcurrentSessions": StringAttribute, // 
+        "serverGUID": StringAttribute, // 
+        "timeAlive": StringAttribute, // 
+        "clusterName": StringAttribute, // 
+        "backingTable_SysServerConfigRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_serverconfigurations");
   }

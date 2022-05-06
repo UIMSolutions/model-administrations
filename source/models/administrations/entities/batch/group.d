@@ -11,8 +11,8 @@ class DADMBatchGroup : DOOPEntity {
 
     this
       .addValues([  
-        "serverId": UUIDAttributeClass, // 
-        "backingTable_BatchGroupRelationshipId": UUIDAttributeClass, // 
+        "serverId": UUIDAttribute, // 
+        "backingTable_BatchGroupRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_batchgroups");
   }

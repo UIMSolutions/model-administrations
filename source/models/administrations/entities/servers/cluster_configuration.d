@@ -12,7 +12,7 @@ class DADMServerClusterConfiguration : DOOPEntity {
 
     this
       .addValues([
-        "backingTable_SysClusterConfigRelationshipId": UUIDAttributeClass, // 
+        "backingTable_SysClusterConfigRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_serverclusterconfigurations");
   }

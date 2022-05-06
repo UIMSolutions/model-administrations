@@ -11,15 +11,15 @@ class DADMConfiguratorDefinitionGroupField : DOOPEntity {
 
     this
       .addValues([
-        "definitionGroupId": UUIDAttributeClass, // 
-        "dataSourceNumber": StringAttributeClass, // 
-        "fieldGroup": StringAttributeClass, // 
-        "fieldName": StringAttributeClass, // 
-        "sortOrder": StringAttributeClass, // 
-        "tableName": StringAttributeClass, // 
-        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
-        "backingTable_ConfDefinitions_BRRelationshipId": UUIDAttributeClass, // 
-        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "definitionGroupId": UUIDAttribute, // 
+        "dataSourceNumber": StringAttribute, // 
+        "fieldGroup": StringAttribute, // 
+        "fieldName": StringAttribute, // 
+        "sortOrder": StringAttribute, // 
+        "tableName": StringAttribute, // 
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttribute, // 
+        "backingTable_ConfDefinitions_BRRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_configuratordefinitiongroupfields");
   }

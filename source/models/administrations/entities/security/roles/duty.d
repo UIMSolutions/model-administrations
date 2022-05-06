@@ -12,10 +12,10 @@ class DADMSecurityRoleDuty : DOOPEntity {
 
     this
       .addValues([
-        "securityRoleId": StringAttributeClass, // 
-        "securityRoleName": StringAttributeClass, // 
-        "securityDutyId": StringAttributeClass, // 
-        "securityDutyName": StringAttributeClass, // 
+        "securityRoleId": StringAttribute, // 
+        "securityRoleName": StringAttribute, // 
+        "securityDutyId": StringAttribute, // 
+        "securityDutyName": StringAttribute, // 
       ])
       .registerPath("admin_securityroleduties");
   }

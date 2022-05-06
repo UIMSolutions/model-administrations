@@ -12,12 +12,12 @@ class DADMSecurityUserRoleAssociation : DOOPEntity {
 
     this
       .addValues([
-        "AssignmentMode": StringAttributeClass, // 
-        "AssignmentStatus": StringAttributeClass, // 
-        "SecurityRole": StringAttributeClass, // 
-        "UserId": StringAttributeClass, // 
-        "SecurityRoleId": StringAttributeClass, // 
-        "SecurityRoleName": StringAttributeClass, // 
+        "AssignmentMode": StringAttribute, // 
+        "AssignmentStatus": StringAttribute, // 
+        "SecurityRole": StringAttribute, // 
+        "UserId": StringAttribute, // 
+        "SecurityRoleId": StringAttribute, // 
+        "SecurityRoleName": StringAttribute, // 
       ])
       .registerPath("admin_securityuserroleassociation");
   }

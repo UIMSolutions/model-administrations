@@ -12,11 +12,11 @@ class DADMUserGroupUserList : DOOPEntity {
 
     this
       .addValues([
-        "groupId": StringAttributeClass, // 
-        "userId": StringAttributeClass, // 
-        "relationship_SystemUserEntityRelationshipId": StringAttributeClass, // 
-        "relationship_SystemUserGroupEntityRelationshipId": StringAttributeClass, // 
-        "backingTable_UserGroupListRelationshipId": StringAttributeClass, // 
+        "groupId": StringAttribute, // 
+        "userId": StringAttribute, // 
+        "relationship_SystemUserEntityRelationshipId": StringAttribute, // 
+        "relationship_SystemUserGroupEntityRelationshipId": StringAttribute, // 
+        "backingTable_UserGroupListRelationshipId": StringAttribute, // 
       ])
       .registerPath("admin_usergroupuserlists");
   }

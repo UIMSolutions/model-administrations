@@ -11,11 +11,11 @@ class DADMCaseDependency : DOOPEntity {
 
     this
       .addValues([
-        "Case": StringAttributeClass, // 
-        "ParentCase": StringAttributeClass, // 
-        "CaseId": UUIDAttributeClass, // 
-        "ParentCaseId": UUIDAttributeClass, // 
-        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "Case": StringAttribute, // 
+        "ParentCase": StringAttribute, // 
+        "CaseId": UUIDAttribute, // 
+        "ParentCaseId": UUIDAttribute, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_casedependencies");
   }

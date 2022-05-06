@@ -11,16 +11,16 @@ class DADMConfiguratorDefinitionGroupTableRelation : DOOPEntity {
 
     this
       .addValues([
-        "DefinitionGroupId": UUIDAttributeClass, // 
-        "FixedValue": StringAttributeClass, // 
-        "RelatedField": StringAttributeClass, // 
-        "RelatedTable": StringAttributeClass, // 
-        "RelationshipType": StringAttributeClass, // 
-        "SourceFieldName": StringAttributeClass, // 
-        "SourceTableName": StringAttributeClass, // 
-        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
-        "backingTable_ConfRelations_BRRelationshipId": UUIDAttributeClass, // 
-        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "DefinitionGroupId": UUIDAttribute, // 
+        "FixedValue": StringAttribute, // 
+        "RelatedField": StringAttribute, // 
+        "RelatedTable": StringAttribute, // 
+        "RelationshipType": StringAttribute, // 
+        "SourceFieldName": StringAttribute, // 
+        "SourceTableName": StringAttribute, // 
+        "Relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttribute, // 
+        "backingTable_ConfRelations_BRRelationshipId": UUIDAttribute, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_configuratordefinitiongrouptablerelation");
   }

@@ -11,13 +11,13 @@ class DADMConfiguratorDefinitionGroupFieldRange : DOOPEntity {
 
     this
       .addValues([
-        "definitionGroupId": UUIDAttributeClass, // 
-        "fieldName": StringAttributeClass, // 
-        "range": StringAttributeClass, // 
-        "tableName": StringAttributeClass, // 
-        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttributeClass, // 
-        "backingTable_ConfRange_BRRelationshipId": UUIDAttributeClass, // 
-        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "definitionGroupId": UUIDAttribute, // 
+        "fieldName": StringAttribute, // 
+        "range": StringAttribute, // 
+        "tableName": StringAttribute, // 
+        "relationship_ConfiguratorDefinitionGroupEntityRelationshipId": UUIDAttribute, // 
+        "backingTable_ConfRange_BRRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_configuratorDefinitiongroupfieldranges");
   }

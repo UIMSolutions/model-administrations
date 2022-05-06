@@ -11,11 +11,11 @@ class DADMConfiguratorDefinitionGroup : DOOPEntity {
 
     this
       .addValues([
-        "definitionGroupId": UUIDAttributeClass, // 
-        "isQueryBased": StringAttributeClass, // 
-        "queryTitle": StringAttributeClass, // 
-        "backingTable_ConfTable_BRRelationshipId": UUIDAttributeClass, // 
-        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "definitionGroupId": UUIDAttribute, // 
+        "isQueryBased": StringAttribute, // 
+        "queryTitle": StringAttribute, // 
+        "backingTable_ConfTable_BRRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_configuratordefinitiongroups");
   }

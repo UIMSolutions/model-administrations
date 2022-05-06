@@ -12,11 +12,11 @@ class DADMSecurityRole : DOOPEntity {
 
     this
       .addValues([
-        "securityRoleIdentifier": StringAttributeClass, // 
-        "securityRoleName": StringAttributeClass, // 
-        "accessToSensitiveData": StringAttributeClass, // 
-        "userLicenseType": StringAttributeClass, // 
-        "contextString": StringAttributeClass, // 
+        "securityRoleIdentifier": StringAttribute, // 
+        "securityRoleName": StringAttribute, // 
+        "accessToSensitiveData": StringAttribute, // 
+        "userLicenseType": StringAttribute, // 
+        "contextString": StringAttribute, // 
       ])
       .registerPath("admin_securityroles");
   }

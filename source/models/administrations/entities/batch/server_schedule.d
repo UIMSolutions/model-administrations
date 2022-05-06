@@ -11,11 +11,11 @@ class DADMBatchServerSchedule : DOOPEntity {
 
     this
       .addValues([
-        "EndTime": StringAttributeClass, // 
-        "MaximumBatchThreads": StringAttributeClass, // 
-        "AOSInstanceName": StringAttributeClass, // 
-        "StartTime": StringAttributeClass, // 
-        "backingTable_BatchServerConfigRelationshipId": UUIDAttributeClass, // 
+        "EndTime": StringAttribute, // 
+        "MaximumBatchThreads": StringAttribute, // 
+        "AOSInstanceName": StringAttribute, // 
+        "StartTime": StringAttribute, // 
+        "backingTable_BatchServerConfigRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_batchserverschedules");
   }

@@ -11,15 +11,15 @@ class DADMCaseAssociation : DOOPEntity {
 
     this
       .addValues([
-        "AssociationCompany": StringAttributeClass, // 
-        "AssociationId": UUIDAttributeClass, // 
-        "CaseId": UUIDAttributeClass, // 
-        "CaseRecId": UUIDAttributeClass, // 
-        "EntityType": StringAttributeClass, // 
-        "isPrimary": StringAttributeClass, // 
-        "Reference": StringAttributeClass, // 
-        "Relationship_CaseDetailEntityRelationshipId": UUIDAttributeClass, // 
-        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "AssociationCompany": StringAttribute, // 
+        "AssociationId": UUIDAttribute, // 
+        "CaseId": UUIDAttribute, // 
+        "CaseRecId": UUIDAttribute, // 
+        "EntityType": StringAttribute, // 
+        "isPrimary": StringAttribute, // 
+        "Reference": StringAttribute, // 
+        "Relationship_CaseDetailEntityRelationshipId": UUIDAttribute, // 
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_caseassociationS");
   }

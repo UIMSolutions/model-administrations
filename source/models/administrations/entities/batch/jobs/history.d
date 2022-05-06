@@ -11,19 +11,19 @@ class DADMBatchJobHistory : DOOPEntity {
 
     this
       .addValues([
-        "AlertsProcessed": StringAttributeClass, // 
-        "JobDescription": StringAttributeClass, // 
-        "EndDateTime": DatetimeAttributeClass, //  
-        "Finishing": StringAttributeClass, // 
-        "OrigStartDateTime": DatetimeAttributeClass, //  
-        "StartDateTime": DatetimeAttributeClass, //  
-        "Status": StringAttributeClass, // 
-        "Company": StringAttributeClass, // 
-        "BatchJobId": UUIDAttributeClass, // 
-        "BatchCreatedBy":UserIdAttributeClass, // 
-        "CanceledBy":UserIdAttributeClass, // 
-        "DataPartition": StringAttributeClass, // 
-        "backingTable_BatchJobHistoryRelationshipId": UUIDAttributeClass, // 
+        "AlertsProcessed": StringAttribute, // 
+        "JobDescription": StringAttribute, // 
+        "EndDateTime": DatetimeAttribute, //  
+        "Finishing": StringAttribute, // 
+        "OrigStartDateTime": DatetimeAttribute, //  
+        "StartDateTime": DatetimeAttribute, //  
+        "Status": StringAttribute, // 
+        "Company": StringAttribute, // 
+        "BatchJobId": UUIDAttribute, // 
+        "BatchCreatedBy":UserIdAttribute, // 
+        "CanceledBy":UserIdAttribute, // 
+        "DataPartition": StringAttribute, // 
+        "backingTable_BatchJobHistoryRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_batchjobhistories");
   }

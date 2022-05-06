@@ -12,13 +12,13 @@ class DADMPolicyRuleType : DOOPEntity {
 
     this
       .addValues([
-        "includeParentRule": StringAttributeClass, // 
-        "isPrecedenceSupported": StringAttributeClass, // 
-        "ruleName": StringAttributeClass, // 
-        "policyTypeRel": StringAttributeClass, // 
-        "policyType": StringAttributeClass, // 
-        "policyName": StringAttributeClass, // 
-        "backingTable_SysPolicyRuleTypeRelationshipId": UUIDAttributeClass, // 
+        "includeParentRule": StringAttribute, // 
+        "isPrecedenceSupported": StringAttribute, // 
+        "ruleName": StringAttribute, // 
+        "policyTypeRel": StringAttribute, // 
+        "policyType": StringAttribute, // 
+        "policyName": StringAttribute, // 
+        "backingTable_SysPolicyRuleTypeRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_policyruletypes");
   }

@@ -12,9 +12,9 @@ class DADMSecurityRoleCustomization : DOOPEntity {
 
     this
       .addValues([
-      "identifier": StringAttributeClass, // 
-      "xmlObject": StringAttributeClass, // 
-      "isDisabled": BooleanAttributeClass, // 
+      "identifier": StringAttribute, // 
+      "xmlObject": StringAttribute, // 
+      "isDisabled": BooleanAttribute, // 
       ])
       .registerPath("admin_securityrolecustomizations");
   }

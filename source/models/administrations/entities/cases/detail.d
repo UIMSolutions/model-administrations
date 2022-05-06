@@ -11,58 +11,58 @@ class DADMCaseDetailBase : DOOPEntity {
 
     this
       .addValues([
-        ContactIdAttributeClass, // 
+        ContactIdAttribute, // 
       ])
       .addValues([
-        "answerId": UUIDAttributeClass, // 
-        "billingProjectId": UUIDAttributeClass, // 
-        "caseCategoryHierarchyDetail": StringAttributeClass, // 
-        "caseId": UUIDAttributeClass, // 
-        "caseStatus": StringAttributeClass, // 
-        "categoryId": UUIDAttributeClass, // 
-        "categoryType": StringAttributeClass, // 
-        "closedBy":UserIdAttributeClass, // 
-        "closedDateAndTime": StringAttributeClass, // 
-        "compliance": StringAttributeClass, // 
-        "caseCreatedDateAndTime": StringAttributeClass, // 
-        "department": StringAttributeClass, // 
-        "dirParty": StringAttributeClass, // 
-        "employeeResponsibleName": StringAttributeClass, // 
-        "employeeResponsiblePersonnelNumber": StringAttributeClass, // 
-        "fmlAApproved": StringAttributeClass, // 
-        "fmlAApprovedBy":UserIdAttributeClass, // 
-        "fmlAApprovedHours": StringAttributeClass, // 
-        "fmlAEstimatedLeaveEndDate": StringAttributeClass, // 
-        "fmlAHoursWorked": StringAttributeClass, // 
-        "fmlALeaveReason": StringAttributeClass, // 
-        "fmlALeaveRequestDate": StringAttributeClass, // 
-        "fmlALeaveSchedule": StringAttributeClass, // 
-        "fmlALeaveStartDate": StringAttributeClass, // 
-        "fmlALengthOfEmployment": StringAttributeClass, // 
-        "fmlAMaintainHoursManually": StringAttributeClass, // 
-        "fmlAMilitaryHoursAvailable": StringAttributeClass, // 
-        "fmlAStandardHoursAvailable": StringAttributeClass, // 
-        "hcmWorker": StringAttributeClass, // 
-        "instanceRelationType": StringAttributeClass, // 
-        "notes": StringAttributeClass, // 
-        "departmentNumber": StringAttributeClass, // 
-        "partyNumber": StringAttributeClass, // 
-        "plannedEffectiveDate": StringAttributeClass, // 
-        "priority": StringAttributeClass, // 
-        "processId": UUIDAttributeClass, // 
-        "questionnaireId": UUIDAttributeClass, // 
-        "resolution": StringAttributeClass, // 
-        "serviceStageId": UUIDAttributeClass, // 
-        "serviceLevelAgreementId": UUIDAttributeClass, // 
-        "serviceLevelAgreementStatus": StringAttributeClass, // 
-        "serviceLevelCompletionDate": StringAttributeClass, // 
-        "emailId": UUIDAttributeClass, // 
-        "relationship_DirPartyBaseEntityRelationshipId": UUIDAttributeClass, // 
-        "relationship_ProjectEntityRelationshipId": UUIDAttributeClass, // 
-        "relationship_smmContactPersonEntityRelationshipId": UUIDAttributeClass, // 
-        "relationship_OMOperatingUnitEntityRelationshipId": UUIDAttributeClass, // 
-        "relationship_HcmWorkerEntityRelationshipId": UUIDAttributeClass, // 
-        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttributeClass, // 
+        "answerId": UUIDAttribute, // 
+        "billingProjectId": UUIDAttribute, // 
+        "caseCategoryHierarchyDetail": StringAttribute, // 
+        "caseId": UUIDAttribute, // 
+        "caseStatus": StringAttribute, // 
+        "categoryId": UUIDAttribute, // 
+        "categoryType": StringAttribute, // 
+        "closedBy":UserIdAttribute, // 
+        "closedDateAndTime": StringAttribute, // 
+        "compliance": StringAttribute, // 
+        "caseCreatedDateAndTime": StringAttribute, // 
+        "department": StringAttribute, // 
+        "dirParty": StringAttribute, // 
+        "employeeResponsibleName": StringAttribute, // 
+        "employeeResponsiblePersonnelNumber": StringAttribute, // 
+        "fmlAApproved": StringAttribute, // 
+        "fmlAApprovedBy":UserIdAttribute, // 
+        "fmlAApprovedHours": StringAttribute, // 
+        "fmlAEstimatedLeaveEndDate": StringAttribute, // 
+        "fmlAHoursWorked": StringAttribute, // 
+        "fmlALeaveReason": StringAttribute, // 
+        "fmlALeaveRequestDate": StringAttribute, // 
+        "fmlALeaveSchedule": StringAttribute, // 
+        "fmlALeaveStartDate": StringAttribute, // 
+        "fmlALengthOfEmployment": StringAttribute, // 
+        "fmlAMaintainHoursManually": StringAttribute, // 
+        "fmlAMilitaryHoursAvailable": StringAttribute, // 
+        "fmlAStandardHoursAvailable": StringAttribute, // 
+        "hcmWorker": StringAttribute, // 
+        "instanceRelationType": StringAttribute, // 
+        "notes": StringAttribute, // 
+        "departmentNumber": StringAttribute, // 
+        "partyNumber": StringAttribute, // 
+        "plannedEffectiveDate": StringAttribute, // 
+        "priority": StringAttribute, // 
+        "processId": UUIDAttribute, // 
+        "questionnaireId": UUIDAttribute, // 
+        "resolution": StringAttribute, // 
+        "serviceStageId": UUIDAttribute, // 
+        "serviceLevelAgreementId": UUIDAttribute, // 
+        "serviceLevelAgreementStatus": StringAttribute, // 
+        "serviceLevelCompletionDate": StringAttribute, // 
+        "emailId": UUIDAttribute, // 
+        "relationship_DirPartyBaseEntityRelationshipId": UUIDAttribute, // 
+        "relationship_ProjectEntityRelationshipId": UUIDAttribute, // 
+        "relationship_smmContactPersonEntityRelationshipId": UUIDAttribute, // 
+        "relationship_OMOperatingUnitEntityRelationshipId": UUIDAttribute, // 
+        "relationship_HcmWorkerEntityRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_casedetailbases");
   }
