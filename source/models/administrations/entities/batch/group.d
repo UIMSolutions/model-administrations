@@ -3,8 +3,8 @@ module models.administrations.entities.batch.group;
 @safe:
 import models.administrations;
 
-class DADMBatchGroup : DOOPEntity {
-  mixin(EntityThis!("ADMBatchGroup"));
+class DBatchGroupEntity : DOOPEntity {
+  mixin(EntityThis!("BatchGroupEntity"));
 
   override void initialize() {
     super.initialize;
@@ -12,19 +12,20 @@ class DADMBatchGroup : DOOPEntity {
     this
       .addValues([  
         "serverId": UUIDAttribute, // 
+        "description": StringAttribute, // 
         "backingTable_BatchGroupRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("admin_batchgroups");
   }
 }
-mixin(EntityCalls!("ADMBatchGroup"));
+mixin(EntityCalls!("BatchGroupEntity"));
 
 version(test_library) {
   unittest {
     assert(APLFeedback);
-    assert(ADMBatchGroup);
+    assert(BatchGroupEntity);
 
-  auto entity = ADMBatchGroup;
+  auto entity = BatchGroupEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

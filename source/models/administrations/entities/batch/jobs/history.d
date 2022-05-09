@@ -3,8 +3,8 @@ module models.administrations.entities.batch.jobs.history;
 @safe:
 import models.administrations;
 
-class DADMBatchJobHistory : DOOPEntity {
-  mixin(EntityThis!("ADMBatchJobHistory"));
+class DBatchJobHistoryEntity : DOOPEntity {
+  mixin(EntityThis!("BatchJobHistoryEntity"));
 
   override void initialize() {
     super.initialize;
@@ -28,14 +28,14 @@ class DADMBatchJobHistory : DOOPEntity {
       .registerPath("admin_batchjobhistories");
   }
 }
-mixin(EntityCalls!("ADMBatchJobHistory"));
+mixin(EntityCalls!("BatchJobHistoryEntity"));
 
 version(test_library) {
   unittest {
     assert(APLFeedback);
-    assert(ADMBatchJobHistory);
+    assert(BatchJobHistoryEntity);
 
-  auto entity = ADMBatchJobHistory;
+  auto entity = BatchJobHistoryEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

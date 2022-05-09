@@ -3,8 +3,8 @@ module models.administrations.entities.batch.server_schedule;
 @safe:
 import models.administrations;
 
-class DADMBatchServerSchedule : DOOPEntity {
-  mixin(EntityThis!("ADMBatchServerSchedule"));
+class DBatchServerScheduleEntity : DOOPEntity {
+  mixin(EntityThis!("BatchServerScheduleEntity"));
 
   override void initialize() {
     super.initialize;
@@ -20,14 +20,13 @@ class DADMBatchServerSchedule : DOOPEntity {
       .registerPath("admin_batchserverschedules");
   }
 }
-mixin(EntityCalls!("ADMBatchServerSchedule"));
+mixin(EntityCalls!("BatchServerScheduleEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(ADMBatchServerSchedule);
+    assert(BatchServerScheduleEntity);
 
-  auto entity = ADMBatchServerSchedule;
+  auto entity = BatchServerScheduleEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

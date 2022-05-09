@@ -3,8 +3,8 @@ module models.administrations.entities.batch.jobs.job;
 @safe:
 import models.administrations;
 
-class DADMBatchJob : DOOPEntity {
-  mixin(EntityThis!("ADMBatchJob"));
+class DBatchJobEntity : DOOPEntity {
+  mixin(EntityThis!("BatchJobEntity"));
 
   override void initialize() {
     super.initialize;
@@ -32,14 +32,14 @@ class DADMBatchJob : DOOPEntity {
       .registerPath("admin_batchjobs");
   }
 }
-mixin(EntityCalls!("ADMBatchJob"));
+mixin(EntityCalls!("BatchJobEntity"));
 
 version(test_library) {
   unittest {
     assert(APLFeedback);
-    assert(ADMBatchJob);
+    assert(BatchJobEntity);
 
-  auto entity = ADMBatchJob;
+  auto entity = BatchJobEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
