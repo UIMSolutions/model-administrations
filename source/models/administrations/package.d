@@ -17,6 +17,7 @@ public import uim.entities;
 public import models.systems;
 
 // model-system packages
+public import models.administrations.attributes;
 public import models.administrations.classes;
 public import models.administrations.entities;
 
