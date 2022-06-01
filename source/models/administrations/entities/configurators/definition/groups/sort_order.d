@@ -25,7 +25,7 @@ class DADMConfiguratorDefinitionGroupSortOrder : DOOPEntity {
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSortOrder"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMConfiguratorDefinitionGroupSortOrder);

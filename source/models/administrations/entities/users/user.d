@@ -62,7 +62,7 @@ class DADMUser : DOOPEntity {
 }
 mixin(EntityCalls!("ADMUser"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMUser);

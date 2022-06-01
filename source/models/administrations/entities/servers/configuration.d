@@ -29,7 +29,7 @@ class DADMServerConfiguration : DOOPEntity {
 }
 mixin(EntityCalls!("ADMServerConfiguration"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(ADMServerConfiguration);
   

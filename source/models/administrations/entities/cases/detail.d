@@ -69,7 +69,7 @@ class DCaseDetailBaseEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CaseDetailBaseEntity"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(CaseDetailBaseEntity);
 

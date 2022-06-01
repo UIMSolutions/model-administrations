@@ -30,7 +30,7 @@ class DBatchJobHistoryEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BatchJobHistoryEntity"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(BatchJobHistoryEntity);

@@ -25,7 +25,7 @@ class DADMPolicyType : DOOPEntity {
 }
 mixin(EntityCalls!("ADMPolicyType"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMPolicyType);

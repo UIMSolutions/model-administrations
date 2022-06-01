@@ -29,7 +29,7 @@ class DADMPolicyOrganization : DOOPEntity {
 }
 mixin(EntityCalls!("ADMPolicyOrganization"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMPolicyOrganization);

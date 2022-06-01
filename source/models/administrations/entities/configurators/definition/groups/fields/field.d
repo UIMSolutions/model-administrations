@@ -26,7 +26,7 @@ class DADMConfiguratorDefinitionGroupField : DOOPEntity {
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupField"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMConfiguratorDefinitionGroupField);

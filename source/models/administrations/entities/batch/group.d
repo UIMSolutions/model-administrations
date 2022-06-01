@@ -20,7 +20,7 @@ class DBatchGroupEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BatchGroupEntity"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(BatchGroupEntity);
 

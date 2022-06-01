@@ -28,7 +28,7 @@ class DADMParameters : DOOPEntity {
 }
 mixin(EntityCalls!("ADMParameters"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMParameters);

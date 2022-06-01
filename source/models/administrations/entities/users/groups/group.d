@@ -25,7 +25,7 @@ class DADMGroup : DOOPEntity {
 }
 mixin(EntityCalls!("ADMGroup"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(ADMGroup);
   

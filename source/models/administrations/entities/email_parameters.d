@@ -27,7 +27,7 @@ class DADMEmailParameters : DOOPEntity {
 }
 mixin(EntityCalls!("ADMEmailParameters"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMEmailParameters);

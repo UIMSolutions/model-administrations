@@ -29,7 +29,7 @@ class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSummation"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMConfiguratorDefinitionGroupSummation);

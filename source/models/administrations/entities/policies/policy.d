@@ -23,7 +23,7 @@ class DADMPolicy : DOOPEntity {
 }
 mixin(EntityCalls!("ADMPolicy"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMPolicy);

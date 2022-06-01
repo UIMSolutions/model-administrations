@@ -24,7 +24,7 @@ class DADMConfiguratorDefinitionGroupFieldRange : DOOPEntity {
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupFieldRange"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMConfiguratorDefinitionGroupFieldRange);

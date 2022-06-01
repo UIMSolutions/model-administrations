@@ -24,7 +24,7 @@ class DBrazilianElectronicReportingParametersEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BrazilianElectronicReportingParametersEntity"));
 
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(BrazilianElectronicReportingParametersEntity);
 

@@ -22,7 +22,7 @@ class DADMUserGroupUserList : DOOPEntity {
   }
 }
 mixin(EntityCalls!("ADMUserGroupUserList"));
-version(test_library) {
+version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
     assert(ADMUserGroupUserList);
