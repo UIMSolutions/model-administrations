@@ -11,18 +11,18 @@ class DBatchJobHistoryEntity : DOOPEntity {
 
     this
       .addValues([
-        "AlertsProcessed": StringAttribute, // 
-        "JobDescription": StringAttribute, // 
-        "EndDateTime": DatetimeAttribute, //  
-        "Finishing": StringAttribute, // 
-        "OrigStartDateTime": DatetimeAttribute, //  
-        "StartDateTime": DatetimeAttribute, //  
-        "Status": StringAttribute, // 
-        "Company": StringAttribute, // 
-        "BatchJobId": UUIDAttribute, // 
-        "BatchCreatedBy":UserIdAttribute, // 
-        "CanceledBy":UserIdAttribute, // 
-        "DataPartition": StringAttribute, // 
+        "alertsProcessed": StringAttribute, // 
+        "jobDescription": StringAttribute, // 
+        "endDateTime": DatetimeAttribute, //  
+        "finishing": StringAttribute, // 
+        "origStartDateTime": DatetimeAttribute, //  
+        "startDateTime": DatetimeAttribute, //  
+        "status": StringAttribute, // 
+        "company": StringAttribute, // 
+        "batchJobId": UUIDAttribute, // 
+        "batchCreatedBy":UserIdAttribute, // 
+        "canceledBy":UserIdAttribute, // 
+        "dataPartition": StringAttribute, // 
         "backingTable_BatchJobHistoryRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("administration_batchjobhistories");
