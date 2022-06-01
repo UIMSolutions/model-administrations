@@ -3,41 +3,33 @@ module models.administrations.entities.cases.association;
 @safe:
 import models.administrations;
 
-class DADMCaseAssociation : DOOPEntity {
-  mixin(EntityThis!("ADMCaseAssociation"));
+class DCaseAssociationEntity : DOOPEntity {
+  mixin(EntityThis!("CaseAssociationEntity"));
 
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-        "AssociationCompany": StringAttribute, // 
-        "AssociationId": UUIDAttribute, // 
-        "CaseId": UUIDAttribute, // 
-        "CaseRecId": UUIDAttribute, // 
-        "EntityType": StringAttribute, // 
+        "associationCompany": StringAttribute, // 
+        "associationId": UUIDAttribute, // 
+        "caseId": UUIDAttribute, // 
+        "caseRecId": UUIDAttribute, // 
+        "entityType": StringAttribute, // 
         "isPrimary": StringAttribute, // 
-        "Reference": StringAttribute, // 
-        "Relationship_CaseDetailEntityRelationshipId": UUIDAttribute, // 
-        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
+        "reference": StringAttribute, // 
+        "relationship_CaseDetailEntityRelationshipId": UUIDAttribute, // 
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
       .registerPath("administration_caseassociationS");
   }
 }
-mixin(EntityCalls!("ADMCaseAssociation"));
+mixin(EntityCalls!("CaseAssociationEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(ADMCaseAssociation);
+    assert(CaseAssociationEntity);
 
-  auto entity = ADMCaseAssociation;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = CaseAssociationEntity;
   }
 }

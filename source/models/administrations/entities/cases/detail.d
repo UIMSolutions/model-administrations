@@ -3,8 +3,8 @@ module models.administrations.entities.cases.detail;
 @safe:
 import models.administrations;
 
-class DADMCaseDetailBase : DOOPEntity {
-  mixin(EntityThis!("ADMCaseDetailBase"));
+class DCaseDetailBaseEntity : DOOPEntity {
+  mixin(EntityThis!("CaseDetailBaseEntity"));
 
   override void initialize() {
     super.initialize;
@@ -67,20 +67,12 @@ class DADMCaseDetailBase : DOOPEntity {
       .registerPath("administration_casedetailbases");
   }
 }
-mixin(EntityCalls!("ADMCaseDetailBase"));
+mixin(EntityCalls!("CaseDetailBaseEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(ADMCaseDetailBase);
+    assert(CaseDetailBaseEntity);
 
-  auto entity = ADMCaseDetailBase;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = CaseDetailBaseEntity;
   }
 }
