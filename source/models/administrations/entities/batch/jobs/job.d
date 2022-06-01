@@ -29,7 +29,7 @@ class DBatchJobEntity : DOOPEntity {
         "ExecutingBy":UserIdAttribute, // 
         "backingTable_BatchJobRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_batchjobs");
+      .registerPath("administration_batchjobs");
   }
 }
 mixin(EntityCalls!("BatchJobEntity"));

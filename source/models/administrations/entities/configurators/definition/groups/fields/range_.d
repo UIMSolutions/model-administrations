@@ -19,7 +19,7 @@ class DADMConfiguratorDefinitionGroupFieldRange : DOOPEntity {
         "backingTable_ConfRange_BRRelationshipId": UUIDAttribute, // 
         "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_configuratorDefinitiongroupfieldranges");
+      .registerPath("administration_configuratorDefinitiongroupfieldranges");
   }
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupFieldRange"));

@@ -14,7 +14,7 @@ class DADMServerClusterConfiguration : DOOPEntity {
       .addValues([
         "backingTable_SysClusterConfigRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_serverclusterconfigurations");
+      .registerPath("administration_serverclusterconfigurations");
   }
 }
 mixin(EntityCalls!("ADMServerClusterConfiguration"));

@@ -24,7 +24,7 @@ class DADMConfiguratorDefinitionGroupSummation : DOOPEntity {
         "backingTable_ConfSummation_BRRelationshipId": UUIDAttribute, // 
         "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
        ])
-      .registerPath("admin_configuratordefinitiongroupsummation");
+      .registerPath("administration_configuratordefinitiongroupsummation");
   }
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSummation"));

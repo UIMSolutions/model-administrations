@@ -20,7 +20,7 @@ class DADMConfiguratorDefinitionGroupSortOrder : DOOPEntity {
         "backingTable_ConfSortOrder_BRRelationshipId": UUIDAttribute, // 
         "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_configuratordefinitiongroupsortorders");
+      .registerPath("administration_configuratordefinitiongroupsortorders");
   }
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupSortOrder"));

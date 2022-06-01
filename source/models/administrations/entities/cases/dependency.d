@@ -17,7 +17,7 @@ class DADMCaseDependency : DOOPEntity {
         "ParentCaseId": UUIDAttribute, // 
         "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_casedependencies");
+      .registerPath("administration_casedependencies");
   }
 }
 mixin(EntityCalls!("ADMCaseDependency"));

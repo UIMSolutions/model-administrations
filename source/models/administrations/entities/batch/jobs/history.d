@@ -25,7 +25,7 @@ class DBatchJobHistoryEntity : DOOPEntity {
         "DataPartition": StringAttribute, // 
         "backingTable_BatchJobHistoryRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_batchjobhistories");
+      .registerPath("administration_batchjobhistories");
   }
 }
 mixin(EntityCalls!("BatchJobHistoryEntity"));
@@ -35,13 +35,6 @@ version(test_library) {
     assert(APLFeedback);
     assert(BatchJobHistoryEntity);
 
-  auto entity = BatchJobHistoryEntity;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = BatchJobHistoryEntity;
   }
 }

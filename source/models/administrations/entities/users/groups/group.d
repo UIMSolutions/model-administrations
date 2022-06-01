@@ -20,7 +20,7 @@ class DADMGroup : DOOPEntity {
         "preferredTimeZone": StringAttribute, // 
         "preferredCalendar": StringAttribute, // 
       ])
-      .registerPath("admin_groups");
+      .registerPath("administration_groups");
   }
 }
 mixin(EntityCalls!("ADMGroup"));

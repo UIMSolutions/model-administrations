@@ -15,7 +15,7 @@ class DBatchGroupEntity : DOOPEntity {
         "description": StringAttribute, // 
         "backingTable_BatchGroupRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_batchgroups");
+      .registerPath("administration_batchgroups");
   }
 }
 mixin(EntityCalls!("BatchGroupEntity"));

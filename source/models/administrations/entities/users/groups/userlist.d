@@ -18,7 +18,7 @@ class DADMUserGroupUserList : DOOPEntity {
         "relationship_SystemUserGroupEntityRelationshipId": StringAttribute, // 
         "backingTable_UserGroupListRelationshipId": StringAttribute, // 
       ])
-      .registerPath("admin_usergroupuserlists");
+      .registerPath("administration_usergroupuserlists");
   }
 }
 mixin(EntityCalls!("ADMUserGroupUserList"));

@@ -64,7 +64,7 @@ class DADMCaseDetailBase : DOOPEntity {
         "relationship_HcmWorkerEntityRelationshipId": UUIDAttribute, // 
         "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_casedetailbases");
+      .registerPath("administration_casedetailbases");
   }
 }
 mixin(EntityCalls!("ADMCaseDetailBase"));

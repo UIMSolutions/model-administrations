@@ -23,7 +23,7 @@ class DADMParameters : DOOPEntity {
         "Relationship_ExchangeRateRelationshipId": UUIDAttribute, // 
         "backingTable_SystemParametersRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_parameters");
+      .registerPath("administration_parameters");
   }
 }
 mixin(EntityCalls!("ADMParameters"));

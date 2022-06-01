@@ -57,7 +57,7 @@ class DADMUser : DOOPEntity {
         "AutomaticUrlUpdate": StringAttribute, // 
         "UserObjectId": UUIDAttribute, // 
       ])
-      .registerPath("admin_users");
+      .registerPath("administration_users");
   }
 }
 mixin(EntityCalls!("ADMUser"));

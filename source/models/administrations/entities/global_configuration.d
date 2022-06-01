@@ -16,7 +16,7 @@ class DADMGlobalConfiguration : DOOPEntity {
         "settingLevel": StringAttribute, // 
         "value": StringAttribute, // 
       ])
-      .registerPath("admin_globalconfigurations");
+      .registerPath("administration_globalconfigurations");
   }
 }
 mixin(EntityCalls!("ADMGlobalConfiguration"));

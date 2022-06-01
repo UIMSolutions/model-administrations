@@ -21,7 +21,7 @@ class DADMCaseAssociation : DOOPEntity {
         "Relationship_CaseDetailEntityRelationshipId": UUIDAttribute, // 
         "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_caseassociationS");
+      .registerPath("administration_caseassociationS");
   }
 }
 mixin(EntityCalls!("ADMCaseAssociation"));

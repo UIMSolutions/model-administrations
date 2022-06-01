@@ -21,7 +21,7 @@ class DADMConfiguratorDefinitionGroupTable : DOOPEntity {
         "backingTable_ConfTableSelection_BRRelationshipId": UUIDAttribute, // 
         "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_configuratordefinitiongrouptables");
+      .registerPath("administration_configuratordefinitiongrouptables");
   }
 }
 mixin(EntityCalls!("ADMConfiguratorDefinitionGroupTable"));

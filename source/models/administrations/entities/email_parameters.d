@@ -22,7 +22,7 @@ class DADMEmailParameters : DOOPEntity {
         "MailerInteractiveEnabled": StringAttribute, // 
         "BackingTable_SysEmailParametersRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_emailparameters");
+      .registerPath("administration_emailparameters");
   }
 }
 mixin(EntityCalls!("ADMEmailParameters"));

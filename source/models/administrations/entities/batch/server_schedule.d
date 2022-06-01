@@ -17,7 +17,7 @@ class DBatchServerScheduleEntity : DOOPEntity {
         "StartTime": StringAttribute, // 
         "backingTable_BatchServerConfigRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_batchserverschedules");
+      .registerPath("administration_batchserverschedules");
   }
 }
 mixin(EntityCalls!("BatchServerScheduleEntity"));

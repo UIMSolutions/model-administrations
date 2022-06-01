@@ -21,7 +21,7 @@ class DADMPolicyInternalOrganizationAssignment : DOOPEntity {
         "OperatingUnitNumber": StringAttribute, // 
         "BackingTable_SysPolicyOrganizationRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_policyinternalorganizationassignment");
+      .registerPath("administration_policyinternalorganizationassignment");
   }
 }
 mixin(EntityCalls!("ADMPolicyInternalOrganizationAssignment"));

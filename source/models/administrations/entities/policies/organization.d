@@ -24,7 +24,7 @@ class DADMPolicyOrganization : DOOPEntity {
         "validTo": StringAttribute, // 
         "backingTable_SysPolicyOrganizationRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_policyorganizations");
+      .registerPath("administration_policyorganizations");
   }
 }
 mixin(EntityCalls!("ADMPolicyOrganization"));

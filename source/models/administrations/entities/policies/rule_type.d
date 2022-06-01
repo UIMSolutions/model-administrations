@@ -20,7 +20,7 @@ class DADMPolicyRuleType : DOOPEntity {
         "policyName": StringAttribute, // 
         "backingTable_SysPolicyRuleTypeRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("admin_policyruletypes");
+      .registerPath("administration_policyruletypes");
   }
 }
 mixin(EntityCalls!("ADMPolicyRuleType"));
