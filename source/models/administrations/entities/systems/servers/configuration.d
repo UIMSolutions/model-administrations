@@ -1,11 +1,11 @@
-module models.administrations.entities.servers.configuration;
+module models.administrations.entities.systems.servers.configuration;
 
 @safe:
 import models.administrations;
 
 // 
-class DADMServerConfiguration : DOOPEntity {
-  mixin(EntityThis!("ADMServerConfiguration"));
+class DSystemServerConfigurationEntity : DOOPEntity {
+  mixin(EntityThis!("SystemServerConfigurationEntity"));
 
   override void initialize() {
     super.initialize;
@@ -24,15 +24,15 @@ class DADMServerConfiguration : DOOPEntity {
         "clusterName": StringAttribute, // 
         "backingTable_SysServerConfigRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("administration_serverconfigurations");
+      .registerPath("administration_systems.serversconfigurations");
   }
 }
-mixin(EntityCalls!("ADMServerConfiguration"));
+mixin(EntityCalls!("SystemServerConfigurationEntity"));
 
 version(test_model_administrations) {
   unittest {
-    assert(ADMServerConfiguration);
+    assert(SystemServerConfigurationEntity);
   
-  auto entity = ADMServerConfiguration;
+  auto entity = SystemServerConfigurationEntity;
   }
 }
