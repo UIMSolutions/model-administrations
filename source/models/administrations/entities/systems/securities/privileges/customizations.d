@@ -4,8 +4,8 @@ module models.administrations.entities.systems.securities.privileges.customizati
 import models.administrations;
 
 // 
-class DSecurityPrivilegeCustomizationsEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityPrivilegeCustomizationsEntity"));
+class DSystemSecurityPrivilegeCustomizationsEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityPrivilegeCustomizationsEntity"));
 
   override void initialize() {
     super.initialize;
@@ -18,12 +18,12 @@ class DSecurityPrivilegeCustomizationsEntity : DOOPEntity {
       .registerPath("administration_system.securities.privilegecustomizations");
   }
 }
-mixin(EntityCalls!("SecurityPrivilegeCustomizationsEntity"));
+mixin(EntityCalls!("SystemSecurityPrivilegeCustomizationsEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityPrivilegeCustomizationsEntity);
+    assert(SystemSecurityPrivilegeCustomizationsEntity);
   
-    auto entity = SecurityPrivilegeCustomizationsEntity;
+    auto entity = SystemSecurityPrivilegeCustomizationsEntity;
   }
 }

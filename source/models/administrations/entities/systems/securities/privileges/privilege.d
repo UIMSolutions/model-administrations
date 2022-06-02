@@ -3,9 +3,8 @@ module models.administrations.entities.systems.securities.privileges.privilege;
 @safe:
 import models.administrations;
 
-// 
-class DSecurityPrivilegeEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityPrivilegeEntity"));
+class DSystemSecurityPrivilegeEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityPrivilegeEntity"));
 
   override void initialize() {
     super.initialize;
@@ -20,12 +19,12 @@ class DSecurityPrivilegeEntity : DOOPEntity {
       .registerPath("administration_system.securities.privileges");
   }
 }
-mixin(EntityCalls!("SecurityPrivilegeEntity"));
+mixin(EntityCalls!("SystemSecurityPrivilegeEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityPrivilegeEntity);
+    assert(SystemSecurityPrivilegeEntity);
   
-    auto entity = SecurityPrivilegeEntity;
+    auto entity = SystemSecurityPrivilegeEntity;
   }
 }
