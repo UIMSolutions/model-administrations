@@ -5,4 +5,4 @@ import models.administrations;
 
 public import models.administrations.entities.currencies.currency;
 public import models.administrations.entities.currencies.isocode;
-public import models.administrations.entities.currencies.revaluation_account;
+public import models.administrations.entities.currencies.revaluationaccount;
