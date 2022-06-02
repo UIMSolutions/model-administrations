@@ -1,4 +1,4 @@
-module source.models.administrations.entities.securities.sods.rule;
+module models.administrations.entities.securities.sods.rule;
 
 @safe:
 import models.administrations;

@@ -4,8 +4,8 @@ module models.administrations.entities.securities.sods.conflict;
 import models.administrations;
 
 // 
-class DSecuritySegregationOfDutiesConflictEntity : DOOPEntity {
-  mixin(EntityThis!("SecuritySegregationOfDutiesConflictEntity"));
+class DSystemSegregationOfDutiesConflictEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSegregationOfDutiesConflictEntity"));
 
   override void initialize() {
     super.initialize;
@@ -36,12 +36,12 @@ class DSecuritySegregationOfDutiesConflictEntity : DOOPEntity {
       .registerPath("administration_system.securities.sodconflicts");
   }
 }
-mixin(EntityCalls!("SecuritySegregationOfDutiesConflictEntity"));
+mixin(EntityCalls!("SystemSegregationOfDutiesConflictEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecuritySegregationOfDutiesConflictEntity);
+    assert(SystemSegregationOfDutiesConflictEntity);
   
-    auto entity = SecuritySegregationOfDutiesConflictEntity;
+    auto entity = SystemSegregationOfDutiesConflictEntity;
   }
 }
