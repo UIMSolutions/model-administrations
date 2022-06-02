@@ -23,7 +23,7 @@ public import models.administrations.entities;
 
 // Register entities
 static this() {
-  uimRegistryEntities
+/*   EntityRegistry
   // Batches
   .register("ADMBatchGroup", ADMBatchGroup)
   .register("administration/batch/group", ADMBatchGroup)
@@ -39,5 +39,5 @@ static this() {
   .register("ADMCaseAssociation", ADMCaseAssociation)
   .register("administration/case/association", ADMCaseAssociation)
   .register("ADMCaseDependency", ADMCaseDependency)
-  .register("administration/case/dependency", ADMCaseDependency); 
+  .register("administration/case/dependency", ADMCaseDependency);  */
 }

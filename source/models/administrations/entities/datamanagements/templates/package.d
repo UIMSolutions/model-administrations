@@ -7,4 +7,4 @@ public import models.administrations.entities.datamanagements.templates.template
 public import models.administrations.entities.datamanagements.templates.detail;
 
 // Additional packages
-public import models.administrations.entities.datamanagements.templates.source;
+public import models.administrations.entities.datamanagements.templates.sources;

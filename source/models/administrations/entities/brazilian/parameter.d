@@ -68,6 +68,6 @@ version(test_model_administrations) {
   unittest {
     assert(BrazilianParametersEntity);
 
-    auto entity = BrazilianParametersEntity;/
+    auto entity = BrazilianParametersEntity;
   }
 }

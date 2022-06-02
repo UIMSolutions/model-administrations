@@ -1,4 +1,4 @@
-module models.administrations.entities.datamanagements;
+module models.administrations.entities.datamanagements.datamanagement;
 
 @safe:
 import models.administrations;

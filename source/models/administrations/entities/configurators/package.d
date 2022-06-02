@@ -3,5 +3,5 @@ module models.administrations.entities.configurators;
 @safe:
 import models.administrations;
 
-public import models.administrations.entities.configurators.definition;
-public import models.administrations.entities.configurators.layout;
+public import models.administrations.entities.configurators.definitions;
+public import models.administrations.entities.configurators.layouts;

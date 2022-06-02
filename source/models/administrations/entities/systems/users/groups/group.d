@@ -13,7 +13,7 @@ class DSystemUserGroupEntity : DOOPEntity {
       .addValues([
         "groupId": StringAttribute, //
         "name": StringAttribute, //
-        "backingTable_UserGroupInfoRelationshipId":       
+        "backingTable_UserGroupInfoRelationshipId": StringAttribute, //      
       ])
       .registerPath("administration_systems.users.groups");
   }

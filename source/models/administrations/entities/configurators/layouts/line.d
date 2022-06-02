@@ -1,4 +1,4 @@
-module models.administrations.entities.configurators.layout.line;
+module models.administrations.entities.configurators.layouts.line;
 
 @safe:
 import models.administrations;

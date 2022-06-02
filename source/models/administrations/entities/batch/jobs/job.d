@@ -38,6 +38,6 @@ version(test_model_administrations) {
   unittest {
     assert(BatchJobEntity);
 
-    auto entity = BatchJobEntity;/
+    auto entity = BatchJobEntity;
   }
 }

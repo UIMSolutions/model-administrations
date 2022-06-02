@@ -1,11 +1,11 @@
-module models.administrations.entities.policies.organization;
+module models.administrations.entities.systems.policies.organization;
 
 @safe:
 import models.administrations;
 
-// 
-class DADMPolicyOrganization : DOOPEntity {
-  mixin(EntityThis!("ADMPolicyOrganization"));
+// Policy organization
+class DSystemPolicyOrganizationEntity : DOOPEntity {
+  mixin(EntityThis!("SystemPolicyOrganizationEntity"));
 
   override void initialize() {
     super.initialize;
@@ -24,17 +24,17 @@ class DADMPolicyOrganization : DOOPEntity {
         "validTo": StringAttribute, // 
         "backingTable_SysPolicyOrganizationRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("administration_policyorganizations");
+      .registerPath("administration_systems.policies.organizations");
   }
 }
-mixin(EntityCalls!("ADMPolicyOrganization"));
+mixin(EntityCalls!("SystemPolicyOrganizationEntity"));
 
 version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
-    assert(ADMPolicyOrganization);
+    assert(SystemPolicyOrganizationEntity);
   
-  auto entity = ADMPolicyOrganization;
+  auto entity = SystemPolicyOrganizationEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

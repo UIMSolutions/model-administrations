@@ -1,4 +1,4 @@
-module models.administrations.entities.datamanagements.executionjobdetail;
+module models.administrations.entities.datamanagements.executionjobs.detail;
 
 @safe:
 import models.administrations;

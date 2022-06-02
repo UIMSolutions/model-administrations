@@ -1,4 +1,4 @@
-module models.administrations.entities.datamanagements.definitiongroupdetail;
+module models.administrations.entities.datamanagements.definitiongroups.detail;
 
 @safe:
 import models.administrations;

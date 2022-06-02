@@ -1,11 +1,11 @@
-module models.administrations.entities.policies.rule_type;
+module models.administrations.entities.systems.policies.ruletype;
 
 @safe:
 import models.administrations;
 
 // 
-class DADMPolicyRuleType : DOOPEntity {
-  mixin(EntityThis!("ADMPolicyRuleType"));
+class DSystemPolicyRuleTypeEntity : DOOPEntity {
+  mixin(EntityThis!("SystemPolicyRuleTypeEntity"));
 
   override void initialize() {
     super.initialize;
@@ -13,24 +13,24 @@ class DADMPolicyRuleType : DOOPEntity {
     this
       .addValues([
         "includeParentRule": StringAttribute, // 
-        "isPrecedenceSupported": StringAttribute, // 
+        "isPrecedenceSupported": BooleanAttribute, // 
         "ruleName": StringAttribute, // 
         "policyTypeRel": StringAttribute, // 
         "policyType": StringAttribute, // 
         "policyName": StringAttribute, // 
         "backingTable_SysPolicyRuleTypeRelationshipId": UUIDAttribute, // 
       ])
-      .registerPath("administration_policyruletypes");
+      .registerPath("administration_systems.policies.ruletypes");
   }
 }
-mixin(EntityCalls!("ADMPolicyRuleType"));
+mixin(EntityCalls!("SystemPolicyRuleTypeEntity"));
 
 version(test_model_administrations) {
   unittest {
     assert(APLFeedback);
-    assert(ADMPolicyRuleType);
+    assert(SystemPolicyRuleTypeEntity);
   
-  auto entity = ADMPolicyRuleType;
+  auto entity = SystemPolicyRuleTypeEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

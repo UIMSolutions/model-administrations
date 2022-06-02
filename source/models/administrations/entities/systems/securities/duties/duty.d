@@ -4,7 +4,7 @@ module models.administrations.entities.systems.securities.duties.duty;
 import models.administrations;
 
 class DSystemSecurityDutyEntity : DOOPEntity {
-  mixin(EntityThis!("SystemSystemSecurityDutyEntity"));
+  mixin(EntityThis!("SystemSecurityDutyEntity"));
 
   override void initialize() {
     super.initialize;

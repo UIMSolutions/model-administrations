@@ -1,4 +1,4 @@
-module models.administrations.entities.datamanagements.executionjob;
+module models.administrations.entities.datamanagements.executionjobs.job;
 
 @safe:
 import models.administrations;
@@ -11,7 +11,7 @@ class DDataManagementExecutionJobEntity : DOOPEntity {
 
     this
       .addValues([
-        "description": StringAttribute
+        "description": StringAttribute, //
         "jobId": StringAttribute
       ])
       .registerPath("administration_datamanagements.executionjobs");
