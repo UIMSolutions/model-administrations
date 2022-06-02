@@ -3,8 +3,8 @@ module models.administrations.entities.systems.securities.duties.duty;
 @safe:
 import models.administrations;
 
-class DSecurityDutyEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityDutyEntity"));
+class DSystemSecurityDutyEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSystemSecurityDutyEntity"));
 
   override void initialize() {
     super.initialize;
@@ -18,16 +18,17 @@ class DSecurityDutyEntity : DOOPEntity {
         "securityPrivilegeName": StringAttribute, // 
         "securityPrivilege": StringAttribute, // 
         "securityPrivilegeId": UUIDAttribute, // 
+        "backingTable_SecurityRoleDutyPrivilegeExplodedGraphRelationshipId": StringAttribute, //
       ])
-      .registerPath("security_duties");
+      .registerPath("administration_system.securities.duties");
   }
 }
-mixin(EntityCalls!("SecurityDutyEntity"));
+mixin(EntityCalls!("SystemSecurityDutyEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityDutyEntity);
+    assert(SystemSecurityDutyEntity);
   
-    auto entity = SecurityDutyEntity;
+    auto entity = SystemSecurityDutyEntity;
   }
 }

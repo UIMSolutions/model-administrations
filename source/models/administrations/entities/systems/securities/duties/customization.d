@@ -3,26 +3,26 @@ module models.administrations.entities.systems.securities.duties.customization;
 @safe:
 import models.administrations;
 
-class DSecurityDutyCustomizationsEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityDutyCustomizationsEntity"));
+class DSystemSecurityDutyCustomizationEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityDutyCustomizationEntity"));
 
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-        "XmlObject": StringAttribute, // 
-        "IsDisabled	": BooleanAttribute, // 
+        "xmlObject": StringAttribute, // 
+        "isDisabled	": BooleanAttribute, // 
       ])
-      .registerPath("security_dutycustomizations");
+      .registerPath("administration_system.securities.dutycustomizations");
   }
 }
-mixin(EntityCalls!("SecurityDutyCustomizationsEntity"));
+mixin(EntityCalls!("SystemSecurityDutyCustomizationEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityDutyCustomizationsEntity);
+    assert(SystemSecurityDutyCustomizationEntity);
   
-    auto entity = SecurityDutyCustomizationsEntity;
+    auto entity = SystemSecurityDutyCustomizationEntity;
   }
 }
