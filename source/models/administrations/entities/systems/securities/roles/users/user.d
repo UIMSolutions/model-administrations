@@ -20,7 +20,7 @@ class DADMSecurityUserRole : DOOPEntity {
         "SecurityRoleName": StringAttribute, // 
         "UserLicenseType": StringAttribute, // 
       ])
-      .registerPath("admin_securityuserroles");
+      .registerPath("administration_securityuserroles");
   }
 }
 mixin(EntityCalls!("ADMSecurityUserRole"));

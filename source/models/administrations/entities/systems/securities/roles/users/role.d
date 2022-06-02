@@ -1,11 +1,11 @@
-module models.administrations.entities.systems.securities.roles.role;
+module models.administrations.entities.systems.securities.roles.users.role;
 
 @safe:
 import models.administrations;
 
 // 
-class DSecurityUserRoleEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityUserRoleEntity"));
+class DSystemSecurityUserRoleEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityUserRoleEntity"));
 
   override void initialize() {
     super.initialize;
@@ -24,13 +24,13 @@ class DSecurityUserRoleEntity : DOOPEntity {
       .registerPath("administration_system.securities.userroles");
   }
 }
-mixin(EntityCalls!("SecurityUserRoleEntity"));
+mixin(EntityCalls!("SystemSecurityUserRoleEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityUserRoleEntity);
+    assert(SystemSecurityUserRoleEntity);
   
-  auto entity = SecurityUserRoleEntity;
+  auto entity = SystemSecurityUserRoleEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

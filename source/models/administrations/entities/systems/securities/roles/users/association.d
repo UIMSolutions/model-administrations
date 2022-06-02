@@ -3,9 +3,8 @@ module models.administrations.entities.systems.securities.roles.users.associatio
 @safe:
 import models.administrations;
 
-// 
-class DSecurityUserRoleAssociationEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityUserRoleAssociationEntity"));
+class DSystemSecurityUserRoleAssociationEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityUserRoleAssociationEntity"));
 
   override void initialize() {
     super.initialize;
@@ -19,22 +18,15 @@ class DSecurityUserRoleAssociationEntity : DOOPEntity {
         "securityRoleId": UUIDAttribute, // 
         "securityRoleName": StringAttribute, // 
       ])
-      .registerPath("administration_system.securities.userroleassociation");
+      .registerPath("administration_system.securities.userrole.associations");
   }
 }
-mixin(EntityCalls!("SecurityUserRoleAssociationEntity"));
+mixin(EntityCalls!("SystemSecurityUserRoleAssociationEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityUserRoleAssociationEntity);
+    assert(SystemSecurityUserRoleAssociationEntity);
   
-  auto entity = SecurityUserRoleAssociationEntity;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = SystemSecurityUserRoleAssociationEntity;
   }
 }

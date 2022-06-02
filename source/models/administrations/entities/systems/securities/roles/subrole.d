@@ -4,8 +4,8 @@ module models.administrations.entities.systems.securities.roles.subrole;
 import models.administrations;
 
 // 
-class DSecuritySubRoleEntity : DOOPEntity {
-  mixin(EntityThis!("SecuritySubRoleEntity"));
+class DSystemSecuritySubRoleEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecuritySubRoleEntity"));
 
   override void initialize() {
     super.initialize;
@@ -20,12 +20,12 @@ class DSecuritySubRoleEntity : DOOPEntity {
       .registerPath("administration_system.securities.subroles");
   }
 }
-mixin(EntityCalls!("SecuritySubRoleEntity"));
+mixin(EntityCalls!("SystemSecuritySubRoleEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecuritySubRoleEntity);
+    assert(SystemSecuritySubRoleEntity);
   
-    auto entity = SecuritySubRoleEntity;
+    auto entity = SystemSecuritySubRoleEntity;
   }
 }

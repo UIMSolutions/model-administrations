@@ -4,8 +4,8 @@ module models.administrations.entities.systems.securities.roles.customization;
 import models.administrations;
 
 // 
-class DSecurityRoleCustomizationEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityRoleCustomizationEntity"));
+class DSystemSecurityRoleCustomizationsEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityRoleCustomizationsEntity"));
 
   override void initialize() {
     super.initialize;
@@ -18,12 +18,12 @@ class DSecurityRoleCustomizationEntity : DOOPEntity {
       .registerPath("administration_system.securities.rolecustomizations");
   }
 }
-mixin(EntityCalls!("SecurityRoleCustomizationEntity"));
+mixin(EntityCalls!("SystemSecurityRoleCustomizationsEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityRoleCustomizationEntity);
+    assert(SystemSecurityRoleCustomizationsEntity);
   
-    auto entity = SecurityRoleCustomizationEntity;
+    auto entity = SystemSecurityRoleCustomizationsEntity;
   }
 }

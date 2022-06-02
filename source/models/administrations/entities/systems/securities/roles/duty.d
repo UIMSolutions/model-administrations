@@ -4,8 +4,8 @@ module models.administrations.entities.systems.securities.roles.duty;
 import models.administrations;
 
 // 
-class DSecurityRoleDutyEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityRoleDutyEntity"));
+class DSystemSecurityRoleDutyEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityRoleDutyEntity"));
 
   override void initialize() {
     super.initialize;
@@ -17,15 +17,15 @@ class DSecurityRoleDutyEntity : DOOPEntity {
         "securityDutyId": UUIDAttribute, // 
         "securityDutyName": StringAttribute, // 
       ])
-      .registerPath("admin_securityroleduties");
+      .registerPath("administration_systems.securities.roleduties");
   }
 }
-mixin(EntityCalls!("SecurityRoleDutyEntity"));
+mixin(EntityCalls!("SystemSecurityRoleDutyEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityRoleDutyEntity);
+    assert(SystemSecurityRoleDutyEntity);
   
-    auto entity = SecurityRoleDutyEntity;
+    auto entity = SystemSecurityRoleDutyEntity;
   }
 }
