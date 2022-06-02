@@ -1,4 +1,4 @@
-module models.administrations.entities.documentroutings.job;
+module models.administrations.entities.documents.routings.job;
 
 @safe:
 import models.administrations;
@@ -25,7 +25,7 @@ class DDocumentRoutingJobEntity : DOOPEntity {
         "printerId": StringAttribute, //
         "backingTable_DocumentRoutingJobRelationshipId": StringAttribute, //
       ])
-      .registerPath("administration_documentroutings.jobs");
+      .registerPath("administration_documents.routings.jobs");
   }
 }
 mixin(EntityCalls!("DocumentRoutingJobEntity"));

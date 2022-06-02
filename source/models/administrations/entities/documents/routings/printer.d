@@ -1,4 +1,4 @@
-module models.administrations.entities.documentroutings.printer;
+module models.administrations.entities.documents.routings.printer;
 
 @safe:
 import models.administrations;
@@ -23,7 +23,7 @@ class DDocumentRoutingPrinterEntity : DOOPEntity {
         "clientApplicationDescription": StringAttribute, //
         "backingTable_DocumentRoutingPrinterAppAssociationRelationshipId": StringAttribute, //
       ])
-      .registerPath("administration_documentroutings.printers");
+      .registerPath("administration_documents.routings.printers");
   }
 }
 mixin(EntityCalls!("DocumentRoutingPrinterEntity"));

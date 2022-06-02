@@ -1,4 +1,4 @@
-module models.administrations.entities.documentroutings.clientapp;
+module models.administrations.entities.documents.routings.clientapp;
 
 @safe:
 import models.administrations;
@@ -15,7 +15,7 @@ class DDocumentRoutingClientAppEntity : DOOPEntity {
         "clientApplicationDescription": StringAttribute, //
         "backingTable_DocumentRoutingClientAppRelationshipId": StringAttribute, //
       ])
-      .registerPath("administration_documentroutings.clientapps");
+      .registerPath("administration_documents.routings.clientapps");
   }
 }
 mixin(EntityCalls!("DocumentRoutingClientAppEntity"));
