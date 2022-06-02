@@ -17,7 +17,7 @@ class DSecurityPrivilegeEntity : DOOPEntity {
         "securityPrivilegeName": StringAttribute, // 
         "securityPrivilegeId": UUIDAttribute, // 
       ])
-      .registerPath("security_privileges");
+      .registerPath("administration_system.securities.privileges");
   }
 }
 mixin(EntityCalls!("SecurityPrivilegeEntity"));

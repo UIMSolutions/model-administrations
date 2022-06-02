@@ -24,7 +24,7 @@ class DSecurityPermissionEntity : DOOPEntity {
         "invokeAccess": StringAttribute, //
         "correctAccess": StringAttribute, //	
       ])
-      .registerPath("security_permissions");
+      .registerPath("administration_system.securities.permissions");
   }
 }
 mixin(EntityCalls!("SecurityPermissionEntity"));

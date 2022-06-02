@@ -15,7 +15,7 @@ class DSecurityRoleCustomizationEntity : DOOPEntity {
         "xmlObject": StringAttribute, // 
         "isDisabled": BooleanAttribute, // 
       ])
-      .registerPath("security_rolecustomizations");
+      .registerPath("administration_system.securities.rolecustomizations");
   }
 }
 mixin(EntityCalls!("SecurityRoleCustomizationEntity"));

@@ -33,7 +33,7 @@ class DSecuritySegregationOfDutiesConflictEntity : DOOPEntity {
         "reasonForOverride":  StringAttribute, // 
         "resolution":  StringAttribute, // 
       ])
-      .registerPath("security_sodconflicts");
+      .registerPath("administration_system.securities.sodconflicts");
   }
 }
 mixin(EntityCalls!("SecuritySegregationOfDutiesConflictEntity"));

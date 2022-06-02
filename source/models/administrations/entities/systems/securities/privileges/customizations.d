@@ -15,7 +15,7 @@ class DSecurityPrivilegeCustomizationsEntity : DOOPEntity {
         "xmlObject": StringAttribute, // 
         "isDisabled": BooleanAttribute, // 
       ])
-      .registerPath("security_privilegecustomizations");
+      .registerPath("administration_system.securities.privilegecustomizations");
   }
 }
 mixin(EntityCalls!("SecurityPrivilegeCustomizationsEntity"));

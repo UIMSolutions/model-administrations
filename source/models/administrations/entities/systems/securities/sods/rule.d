@@ -25,7 +25,7 @@ class DSecuritySegregationOfDutiesRuleEntity : DOOPEntity {
         "risk":  StringAttribute, // 
         "mitigation":  StringAttribute, //      
       ])
-      .registerPath("security_sodrules");
+      .registerPath("administration_system.securities.sodrules");
   }
 }
 mixin(EntityCalls!("SecuritySegregationOfDutiesRuleEntity"));

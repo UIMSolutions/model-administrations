@@ -19,7 +19,7 @@ class DSecurityUserRoleAssociationEntity : DOOPEntity {
         "securityRoleId": UUIDAttribute, // 
         "securityRoleName": StringAttribute, // 
       ])
-      .registerPath("security_userroleassociation");
+      .registerPath("administration_system.securities.userroleassociation");
   }
 }
 mixin(EntityCalls!("SecurityUserRoleAssociationEntity"));

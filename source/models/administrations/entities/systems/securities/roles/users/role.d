@@ -21,7 +21,7 @@ class DSecurityUserRoleEntity : DOOPEntity {
         "securityRole":		StringAttribute, //
         "userId": StringAttribute, //
       ])
-      .registerPath("security_userroles");
+      .registerPath("administration_system.securities.userroles");
   }
 }
 mixin(EntityCalls!("SecurityUserRoleEntity"));

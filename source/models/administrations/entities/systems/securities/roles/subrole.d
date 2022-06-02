@@ -17,7 +17,7 @@ class DSecuritySubRoleEntity : DOOPEntity {
         "securitySubRoleId": UUIDAttribute, // 
         "securitySubRoleName": StringAttribute, // 
       ])
-      .registerPath("security_subroles");
+      .registerPath("administration_system.securities.subroles");
   }
 }
 mixin(EntityCalls!("SecuritySubRoleEntity"));
