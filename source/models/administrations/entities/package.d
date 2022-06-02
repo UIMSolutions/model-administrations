@@ -3,7 +3,9 @@ module models.administrations.entities;
 @safe:
 import models.administrations;
 
+// Subpackages
 public import models.administrations.entities.batch;
+public import models.administrations.entities.brazilian;
 public import models.administrations.entities.cases;
 public import models.administrations.entities.configurators;
 public import models.administrations.entities.currencies;
@@ -18,8 +20,8 @@ public import models.administrations.entities.segregation_of_duties;
 public import models.administrations.entities.servers;
 public import models.administrations.entities.users;
 
+// Submodules
 public import models.administrations.entities.biDateGregorianEntity;
-public import models.administrations.entities.brazilianElectronicReportingParametersEntity;
-public import models.administrations.entities.email_parameters;
-public import models.administrations.entities.global_configuration;
-public import models.administrations.entities.parameters;
+public import models.administrations.entities.emailparameters;
+public import models.administrations.entities.globalconfiguration;
+public import models.administrations.entities.parameter;

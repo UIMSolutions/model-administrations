@@ -3,7 +3,7 @@ module models.administrations.entities.batch;
 @safe:
 import models.administrations;
 
-// Packages
+// Subpackages
 public import models.administrations.entities.batch.group;
 
 // Modules

@@ -1,6 +1,6 @@
 module models.administrations.entities.documents;
 
-// Package
+// Subpackage
 public import models.administrations.entities.documents.routings;
 
 // Modules

@@ -1,18 +1,18 @@
-module source.models.administrations.entities.permission;
+module models.administrations.entities.systems.securities.permission;
 
 @safe:
 import models.administrations;
 
 // 
-class DSecurityPermissionEntity : DOOPEntity {
-  mixin(EntityThis!("SecurityPermissionEntity"));
+class DSystemSecurityPermissionEntity : DOOPEntity {
+  mixin(EntityThis!("SystemSecurityPermissionEntity"));
 
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-        "securityRoleIdentifier": StringAttribute, //
+        "securityRoleId": StringAttribute, //
         "securityRoleName": StringAttribute, //
         "userLicenseType": StringAttribute, //
         "resourceName": StringAttribute, //
@@ -24,15 +24,15 @@ class DSecurityPermissionEntity : DOOPEntity {
         "invokeAccess": StringAttribute, //
         "correctAccess": StringAttribute, //	
       ])
-      .registerPath("administration_system.securities.permissions");
+      .registerPath("administration_systems.securities.permissions");
   }
 }
-mixin(EntityCalls!("SecurityPermissionEntity"));
+mixin(EntityCalls!("SystemSecurityPermissionEntity"));
 
 version(test_library) {
   unittest {
-    assert(SecurityPermissionEntity);
+    assert(SystemSecurityPermissionEntity);
   
-    auto entity = SecurityPermissionEntity;
+    auto entity = SystemSecurityPermissionEntity;
   }
 }
