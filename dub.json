@@ -1,66 +1,69 @@
 {
-	"name": "model-administrations",
 	"authors": [
 		"UI Manufaktur UG"
 	],
-	"license": "MIT",
+	"configurations": [
+		{
+			"importPaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"../../LIBS/uim-models",
+				"../../LIBS/uim-jsonbase",
+				"../../LIBS/uim-entities",
+				"../../LIBS/uim-entitybase",
+				"../model-systems",
+				"./"
+			],
+			"name": "offline",
+			"sourcePaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"../../LIBS/uim-models",
+				"../../LIBS/uim-jsonbase",
+				"../../LIBS/uim-entities",
+				"../../LIBS/uim-entitybase",
+				"../model-systems",
+				"./"
+			],
+			"targetType": "library"
+		},
+		{
+			"importPaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"../../LIBS/uim-models",
+				"../../LIBS/uim-jsonbase",
+				"../../LIBS/uim-entities",
+				"../../LIBS/uim-entitybase",
+				"../model-systems",
+				"./"
+			],
+			"name": "test-offline",
+			"sourcePaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"../../LIBS/uim-models",
+				"../../LIBS/uim-jsonbase",
+				"../../LIBS/uim-entities",
+				"../../LIBS/uim-entitybase",
+				"../model-systems",
+				"./"
+			],
+			"targetType": "library",
+			"versions": [
+				"test_model_administrations"
+			]
+		}
+	],
 	"copyright": "Copyright © 2017 - 2021, UI Manufaktur UG",
-	"description": "Model for administration",
 	"dependencies": {
 		"colored": "~>0.0.23",
 		"silly": "~>1.1.1",
-		"vibe-d": "~>0.9.4"
+		"unit-threaded": "~>2.0.3",
+		"vibe-d": ">=0.9.5-beta.1 <0.10.0-0"
 	},
-	"targetType": "library",
-	"configurations": [
-		{
-			"name": "offline",
-			"importPaths": [
-				"../../LIBS/uim-core",
-				"../../LIBS/uim-oop",
-				"../../LIBS/uim-models",
-				"../../LIBS/uim-jsonbase",
-				"../../LIBS/uim-entities",
-				"../../LIBS/uim-entitybase",
-				"../model-systems",
-				"./"
-			],
-			"sourcePaths": [
-				"../../LIBS/uim-core",
-				"../../LIBS/uim-oop",
-				"../../LIBS/uim-models",
-				"../../LIBS/uim-jsonbase",
-				"../../LIBS/uim-entities",
-				"../../LIBS/uim-entitybase",
-				"../model-systems",
-				"./"
-			]	
-		},
-		{
-			"name": "test-offline",
-			"versions": [
-				"test_model_administrations"
-			],
-			"importPaths": [
-				"../../LIBS/uim-core",
-				"../../LIBS/uim-oop",
-				"../../LIBS/uim-models",
-				"../../LIBS/uim-jsonbase",
-				"../../LIBS/uim-entities",
-				"../../LIBS/uim-entitybase",
-				"../model-systems",
-				"./"
-			],
-			"sourcePaths": [
-				"../../LIBS/uim-core",
-				"../../LIBS/uim-oop",
-				"../../LIBS/uim-models",
-				"../../LIBS/uim-jsonbase",
-				"../../LIBS/uim-entities",
-				"../../LIBS/uim-entitybase",
-				"../model-systems",
-				"./"
-			]	
-		}
-	]
+	"description": "Model for administration",
+	"license": "Apache-2.0",
+	"name": "model-administrations",
+	"targetType": "library"
 }
