@@ -1,6 +1,6 @@
 {
 	"authors": [
-		"UI Manufaktur UG"
+		"Ozan Nurettin Süel"
 	],
 	"configurations": [
 		{
@@ -55,12 +55,10 @@
 			]
 		}
 	],
-	"copyright": "Copyright © 2017 - 2021, UI Manufaktur UG",
+	"copyright": "Copyright © 2010 - 2022, Ozan NUrettin Süel",
 	"dependencies": {
 		"colored": "~>0.0.23",
-		"silly": "~>1.1.1",
-		"unit-threaded": "~>2.0.3",
-		"vibe-d": ">=0.9.5-beta.1 <0.10.0-0"
+		"vibe-d": "~>0.9.5-beta.1"
 	},
 	"description": "Model for administration",
 	"license": "Apache-2.0",
