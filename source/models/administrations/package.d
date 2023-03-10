@@ -1,3 +1,8 @@
+/*********************************************************************************************************
+	Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
 module models.administrations;
 
 @safe:
@@ -12,7 +17,6 @@ public import vibe.d;
 // uim packages
 public import uim.core;
 public import uim.oop;
-public import uim.entities;
 
 public import models.systems;
 
